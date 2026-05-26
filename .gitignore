@@ -1,0 +1,24 @@
+# ── AI / editor ──────────────────────────────────────────────
+.claude/
+
+# ── Design reference folders (not part of live site) ─────────
+stitch_corporate_hygiene_product_catalog (1)/
+stitch_corporate_hygiene_product_catalog (2)/
+Yeni klasör/
+
+# ── Source documents ─────────────────────────────────────────
+Antem.docx
+
+# ── Windows ──────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ── macOS ────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Node (in case tooling is added later) ────────────────────
+node_modules/

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kırtasiye & Baskılı Ürünler – ANTEM Kurumsal Temizlik Tedarik</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f1621', 'primary-light': '#1e2a3a', secondary: '#016a61', 'secondary-light': '#018a7e', 'secondary-pale': '#e6f5f3',
+            surface: '#f7f9fb', 'surface-low': '#f2f4f6', 'surface-container': '#eceef0', 'surface-white': '#ffffff',
+            'on-surface': '#191c1e', 'on-surface-muted': '#45464d', 'outline': '#c6c6cd',
+          },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+          borderRadius: { 'card': '20px', 'card-lg': '28px' },
+          boxShadow: { 'ambient': '0 4px 24px rgba(15,22,33,0.06)', 'ambient-md': '0 8px 40px rgba(15,22,33,0.10)' },
+          maxWidth: { 'container': '1280px' },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="antialiased">
+
+<header id="header" class="sticky top-0 z-50 bg-surface-white/95 backdrop-blur-sm border-b border-outline/60 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]">
+  <div class="max-w-container mx-auto px-4 md:px-10 h-[72px] flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-3 shrink-0">
+      <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center"><span class="ms text-white" style="font-size:20px; font-variation-settings:'FILL' 1,'wght' 500;">water_drop</span></div>
+      <div class="leading-tight"><div class="font-bold text-primary tracking-tight" style="font-size:17px; letter-spacing:-0.02em;">ANTEM</div><div class="text-on-surface-muted" style="font-size:10px; letter-spacing:0.06em; font-weight:600; text-transform:uppercase;">Kurumsal Temizlik</div></div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-1">
+      <a href="index.html" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Ana Sayfa</a>
+      <a href="index.html#urun-gruplari" class="nav-link px-4 py-2 rounded-lg text-secondary font-semibold text-sm bg-secondary-pale">Ürün Grupları</a>
+      <a href="index.html#sektorler" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Sektörler</a>
+      <a href="index.html#hakkimizda" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Hakkımızda</a>
+      <a href="index.html#iletisim" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="index.html#iletisim" class="btn-primary hidden md:inline-flex items-center gap-2 bg-secondary text-white font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-secondary-light shadow-sm"><span class="ms" style="font-size:18px; font-variation-settings:'FILL' 0,'wght' 300;">request_quote</span>Teklif Al</a>
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-surface text-primary" aria-label="Menüyü aç" aria-expanded="false"><span class="ms" style="font-size:24px;">menu</span></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="lg:hidden border-t border-outline/50 bg-surface-white px-4 py-4">
+    <div class="flex flex-col gap-1">
+      <a href="index.html" class="px-4 py-3 rounded-xl text-on-surface font-medium text-sm hover:bg-surface nav-link" onclick="closeMobileMenu()">Ana Sayfa</a>
+      <a href="index.html#urun-gruplari" class="px-4 py-3 rounded-xl text-secondary font-semibold text-sm bg-secondary-pale">Ürün Grupları</a>
+      <a href="index.html#iletisim" class="btn-primary mt-2 flex items-center justify-center gap-2 bg-secondary text-white font-semibold text-sm px-5 py-3 rounded-xl hover:bg-secondary-light" onclick="closeMobileMenu()">Kurumsal Teklif Al</a>
+    </div>
+  </div>
+</header>
+
+<div class="cat-hero">
+  <div class="relative max-w-container mx-auto px-4 md:px-10 py-12 md:py-16">
+    <nav class="breadcrumb-nav">
+      <a href="index.html">Ana Sayfa</a><span class="breadcrumb-sep">/</span>
+      <a href="index.html#urun-gruplari">Ürün Grupları</a><span class="breadcrumb-sep">/</span>
+      <span style="color:rgba(255,255,255,0.7);">Kırtasiye & Baskılı Ürünler</span>
+    </nav>
+    <div class="cat-hero-icon"><span class="ms text-secondary" style="font-size:32px; font-variation-settings:'FILL' 0,'wght' 300;">print</span></div>
+    <h1 class="font-extrabold text-white mb-3" style="font-size:clamp(26px,4vw,44px); letter-spacing:-0.025em; line-height:1.1;">Kırtasiye & Baskılı Ürünler</h1>
+    <p class="text-white/55 max-w-xl leading-relaxed" style="font-size:16px;">Ofis kırtasiyesi, A4 kağıt, kurumsal kartvizit ve broşür baskısı, antetli kağıt, zarflar ve markanıza özel özelleştirilmiş malzemeler.</p>
+    <div class="flex flex-wrap gap-2 mt-8">
+      <a href="#kirtasiye" class="cat-nav-pill cat-nav-pill-active">Ofis Kırtasiyesi</a>
+      <a href="#baski" class="cat-nav-pill cat-nav-pill-idle">Kurumsal Baskı</a>
+      <a href="#kagit" class="cat-nav-pill cat-nav-pill-idle">A4 & Kağıt</a>
+    </div>
+  </div>
+</div>
+
+<section class="section-gap bg-surface">
+  <div class="max-w-container mx-auto px-4 md:px-10">
+
+    <div class="mb-10" id="kirtasiye" data-reveal data-delay="0">
+      <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-4"><span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Ofis Kırtasiyesi</span></div>
+      <h2 class="font-bold text-primary mb-2" style="font-size:clamp(22px,2.5vw,30px); letter-spacing:-0.02em;">Ofis Kırtasiyesi</h2>
+      <p class="text-on-surface-muted text-body max-w-2xl leading-relaxed">Büyük ofisler, oteller ve kurumsal binalar için toplu kırtasiye tedariki.</p>
+    </div>
+    <div class="overflow-x-auto rounded-card-lg border border-outline/40 shadow-ambient bg-surface-white mb-12" data-reveal data-delay="80">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b border-outline/40 bg-surface">
+            <th class="py-4 px-6 text-on-surface-muted font-bold" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Ürün Kodu</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Ürün Adı</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold hidden md:table-cell" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Ambalaj</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold text-right" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Bilgi</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-outline/30">
+          <tr class="prod-row"><td class="py-4 px-6 text-on-surface-muted font-mono text-sm">KRT-101</td><td class="py-4 px-6"><div class="font-semibold text-primary text-sm">Tükenmez Kalem – Mavi</div><div class="text-on-surface-muted text-xs mt-0.5">Orta uç, toplu ambalaj</div></td><td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Kutu (50 Adet)</td><td class="py-4 px-6 text-right"><a href="index.html#iletisim" class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Teklif Al</a></td></tr>
+          <tr class="prod-row"><td class="py-4 px-6 text-on-surface-muted font-mono text-sm">KRT-102</td><td class="py-4 px-6"><div class="font-semibold text-primary text-sm">Kurşun Kalem – HB</div><div class="text-on-surface-muted text-xs mt-0.5">Sınıf ve ofis kullanımı</div></td><td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Kutu (50 Adet)</td><td class="py-4 px-6 text-right"><a href="index.html#iletisim" class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Teklif Al</a></td></tr>
+          <tr class="prod-row"><td class="py-4 px-6 text-on-surface-muted font-mono text-sm">KRT-103</td><td class="py-4 px-6"><div class="font-semibold text-primary text-sm">Zımba & Zımba Teli Seti</div><div class="text-on-surface-muted text-xs mt-0.5">Masaüstü tip, 26/6</div></td><td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Adet / Kutu</td><td class="py-4 px-6 text-right"><a href="index.html#iletisim" class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Teklif Al</a></td></tr>
+          <tr class="prod-row"><td class="py-4 px-6 text-on-surface-muted font-mono text-sm">KRT-104</td><td class="py-4 px-6"><div class="font-semibold text-primary text-sm">Yapışkanlı Not Kağıdı</div><div class="text-on-surface-muted text-xs mt-0.5">76×76 mm, 100 yaprak/blok</div></td><td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Blok (12'li Paket)</td><td class="py-4 px-6 text-right"><a href="index.html#iletisim" class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Teklif Al</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Baskı -->
+    <div class="mb-10" id="baski" data-reveal data-delay="0">
+      <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-4"><span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Kurumsal Baskı</span></div>
+      <h2 class="font-bold text-primary mb-2" style="font-size:clamp(22px,2.5vw,30px); letter-spacing:-0.02em;">Kurumsal Baskılı Ürünler</h2>
+      <p class="text-on-surface-muted text-body max-w-2xl leading-relaxed">Markanıza özel tasarım ve baskı hizmetleri. Kartvizit, broşür, katalog, antetli kağıt, zarf ve özelleştirilebilir kurumsal malzemeler.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12" data-reveal data-delay="80">
+      <div class="bg-surface-white border border-outline/40 rounded-card-lg p-6 shadow-ambient card-hover">
+        <div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-4"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">badge</span></div>
+        <h3 class="font-bold text-primary mb-2 text-sm">Kartvizit Baskısı</h3>
+        <p class="text-on-surface-muted text-sm leading-relaxed mb-3">Tek taraflı / çift taraflı, lak veya mat selefon kaplama. 350 gr kart. Minimum 250 adet.</p>
+        <a href="index.html#iletisim" class="inline-flex items-center gap-1.5 text-secondary font-bold text-sm hover:underline">Teklif Al <span class="ms" style="font-size:14px;">arrow_forward</span></a>
+      </div>
+      <div class="bg-surface-white border border-outline/40 rounded-card-lg p-6 shadow-ambient card-hover">
+        <div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-4"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">article</span></div>
+        <h3 class="font-bold text-primary mb-2 text-sm">Broşür & Katalog</h3>
+        <p class="text-on-surface-muted text-sm leading-relaxed mb-3">A4 / A5 / Triptik baskı. 4 renk ofset. Minimum 500 adet. Tasarım desteği mevcuttur.</p>
+        <a href="index.html#iletisim" class="inline-flex items-center gap-1.5 text-secondary font-bold text-sm hover:underline">Teklif Al <span class="ms" style="font-size:14px;">arrow_forward</span></a>
+      </div>
+      <div class="bg-surface-white border border-outline/40 rounded-card-lg p-6 shadow-ambient card-hover">
+        <div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-4"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">mail</span></div>
+        <h3 class="font-bold text-primary mb-2 text-sm">Antetli Kağıt & Zarf</h3>
+        <p class="text-on-surface-muted text-sm leading-relaxed mb-3">Kurumsal logonuzla özelleştirilmiş A4 antetli kağıt ve pencereli/normal zarflar.</p>
+        <a href="index.html#iletisim" class="inline-flex items-center gap-1.5 text-secondary font-bold text-sm hover:underline">Teklif Al <span class="ms" style="font-size:14px;">arrow_forward</span></a>
+      </div>
+    </div>
+
+    <!-- A4 Kağıt -->
+    <div class="mb-10" id="kagit" data-reveal data-delay="0">
+      <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-4"><span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">A4 & Kağıt</span></div>
+      <h2 class="font-bold text-primary mb-2" style="font-size:clamp(22px,2.5vw,30px); letter-spacing:-0.02em;">A4 Kağıt & Fotokopi Kağıdı</h2>
+    </div>
+    <div class="overflow-x-auto rounded-card-lg border border-outline/40 shadow-ambient bg-surface-white" data-reveal data-delay="80">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b border-outline/40 bg-surface">
+            <th class="py-4 px-6 text-on-surface-muted font-bold" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Ürün Kodu</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Ürün Adı</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold hidden sm:table-cell" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Gramaj</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold hidden md:table-cell" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Koli</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold text-right" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Bilgi</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-outline/30">
+          <tr class="prod-row"><td class="py-4 px-6 text-on-surface-muted font-mono text-sm">KRT-201</td><td class="py-4 px-6"><div class="font-semibold text-primary text-sm">A4 Fotokopi Kağıdı – Beyaz</div><div class="text-on-surface-muted text-xs mt-0.5">ISO 146 beyazlık, 500 yaprak/paket</div></td><td class="py-4 px-6 text-on-surface-muted text-sm hidden sm:table-cell">80 gr/m²</td><td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Koli (5 Paket)</td><td class="py-4 px-6 text-right"><a href="index.html#iletisim" class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Teklif Al</a></td></tr>
+          <tr class="prod-row"><td class="py-4 px-6 text-on-surface-muted font-mono text-sm">KRT-202</td><td class="py-4 px-6"><div class="font-semibold text-primary text-sm">A4 Kağıt – Ekonomik Seri</div><div class="text-on-surface-muted text-xs mt-0.5">Toplu alım için uygun fiyatlı</div></td><td class="py-4 px-6 text-on-surface-muted text-sm hidden sm:table-cell">75 gr/m²</td><td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Koli (10 Paket)</td><td class="py-4 px-6 text-right"><a href="index.html#iletisim" class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Teklif Al</a></td></tr>
+          <tr class="prod-row"><td class="py-4 px-6 text-on-surface-muted font-mono text-sm">KRT-203</td><td class="py-4 px-6"><div class="font-semibold text-primary text-sm">A3 Fotokopi Kağıdı</div><div class="text-on-surface-muted text-xs mt-0.5">500 yaprak/paket</div></td><td class="py-4 px-6 text-on-surface-muted text-sm hidden sm:table-cell">80 gr/m²</td><td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Koli (4 Paket)</td><td class="py-4 px-6 text-right"><a href="index.html#iletisim" class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Teklif Al</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-gap bg-surface-container">
+  <div class="max-w-container mx-auto px-4 md:px-10">
+    <div class="mb-8" data-reveal data-delay="0"><h2 class="font-bold text-primary mb-1" style="font-size:clamp(20px,2vw,26px); letter-spacing:-0.015em;">Diğer Ürün Grupları</h2></div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3" data-reveal data-delay="80">
+      <a href="dezenfektan.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">sanitizer</span></div><div class="font-semibold text-primary text-xs leading-snug">Dezenfektan</div></a>
+      <a href="kagit-urunleri.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">inventory_2</span></div><div class="font-semibold text-primary text-xs leading-snug">Kağıt Ürünleri</div></a>
+      <a href="kimyasallar.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">science</span></div><div class="font-semibold text-primary text-xs leading-snug">Kimyasallar</div></a>
+      <a href="sarf-malzeme.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">shopping_bag</span></div><div class="font-semibold text-primary text-xs leading-snug">Sarf Malzeme</div></a>
+      <a href="cop-poseti.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">delete</span></div><div class="font-semibold text-primary text-xs leading-snug">Çöp Poşeti</div></a>
+      <a href="gida.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">restaurant</span></div><div class="font-semibold text-primary text-xs leading-snug">Gıda Ürünleri</div></a>
+      <a href="ekipmanlar.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">cleaning_services</span></div><div class="font-semibold text-primary text-xs leading-snug">Ekipmanlar</div></a>
+    </div>
+  </div>
+</section>
+
+<section class="page-cta py-16 md:py-20">
+  <div class="max-w-container mx-auto px-4 md:px-10 text-center">
+    <div class="inline-flex items-center gap-2 bg-white/8 border border-white/12 text-white/70 px-3 py-1 rounded-full mb-6" style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Kurumsal Teklif</div>
+    <h2 class="font-extrabold text-white mb-4" style="font-size:clamp(24px,3vw,38px); letter-spacing:-0.025em; line-height:1.15;">Kırtasiye & Baskı İçin<br>Kurumsal Fiyat Alın</h2>
+    <p class="text-white/50 max-w-lg mx-auto mb-8 leading-relaxed" style="font-size:16px;">Ofis kırtasiyesi, A4 kağıt ve kurumsal baskı hizmetlerinde tek kaynaktan toplu tedarik.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="index.html#iletisim" class="hero-btn-primary"><span class="ms hero-btn-icon">request_quote</span>Kurumsal Teklif Al</a>
+      <a href="tel:03123870775" class="hero-btn-outline"><span class="ms hero-btn-icon">phone</span>0312 387 07 75</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-primary-light border-t border-white/8">
+  <div class="max-w-container mx-auto px-4 md:px-10 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-xl bg-secondary flex items-center justify-center"><span class="ms text-white" style="font-size:18px; font-variation-settings:'FILL' 1,'wght' 500;">water_drop</span></div><div><div class="font-bold text-white text-sm">ANTEM Kurumsal Temizlik</div><div class="text-white/40 text-xs">Macun Mah. 177. Cadde Timko 2 No: 19/G-4 Yenimahalle/Ankara</div></div></div>
+      <div class="flex items-center gap-6"><a href="tel:03123870775" class="text-white/50 text-sm hover:text-secondary transition-colors">0312 387 07 75</a><a href="mailto:info@antemtemizliktedarik.com" class="text-white/50 text-sm hover:text-secondary transition-colors">info@antemtemizliktedarik.com</a></div>
+    </div>
+    <div class="border-t border-white/8 mt-8 pt-6 text-center"><p class="text-white/30 text-sm">© 2026 ANTEM Kurumsal Temizlik Tedarik. Tüm hakları saklıdır.</p></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

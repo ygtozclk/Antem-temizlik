@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gıda Ürünleri – ANTEM Kurumsal Temizlik Tedarik</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f1621', 'primary-light': '#1e2a3a', secondary: '#016a61', 'secondary-light': '#018a7e', 'secondary-pale': '#e6f5f3',
+            surface: '#f7f9fb', 'surface-low': '#f2f4f6', 'surface-container': '#eceef0', 'surface-white': '#ffffff',
+            'on-surface': '#191c1e', 'on-surface-muted': '#45464d', 'outline': '#c6c6cd',
+          },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+          borderRadius: { 'card': '20px', 'card-lg': '28px' },
+          boxShadow: { 'ambient': '0 4px 24px rgba(15,22,33,0.06)', 'ambient-md': '0 8px 40px rgba(15,22,33,0.10)' },
+          maxWidth: { 'container': '1280px' },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="antialiased">
+
+<header id="header" class="sticky top-0 z-50 bg-surface-white/95 backdrop-blur-sm border-b border-outline/60 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]">
+  <div class="max-w-container mx-auto px-4 md:px-10 h-[72px] flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-3 shrink-0">
+      <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center"><span class="ms text-white" style="font-size:20px; font-variation-settings:'FILL' 1,'wght' 500;">water_drop</span></div>
+      <div class="leading-tight"><div class="font-bold text-primary tracking-tight" style="font-size:17px; letter-spacing:-0.02em;">ANTEM</div><div class="text-on-surface-muted" style="font-size:10px; letter-spacing:0.06em; font-weight:600; text-transform:uppercase;">Kurumsal Temizlik</div></div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-1">
+      <a href="index.html" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Ana Sayfa</a>
+      <a href="index.html#urun-gruplari" class="nav-link px-4 py-2 rounded-lg text-secondary font-semibold text-sm bg-secondary-pale">Ürün Grupları</a>
+      <a href="index.html#sektorler" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Sektörler</a>
+      <a href="index.html#hakkimizda" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Hakkımızda</a>
+      <a href="index.html#iletisim" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="index.html#iletisim" class="btn-primary hidden md:inline-flex items-center gap-2 bg-secondary text-white font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-secondary-light shadow-sm"><span class="ms" style="font-size:18px; font-variation-settings:'FILL' 0,'wght' 300;">request_quote</span>Teklif Al</a>
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-surface text-primary" aria-label="Menüyü aç" aria-expanded="false"><span class="ms" style="font-size:24px;">menu</span></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="lg:hidden border-t border-outline/50 bg-surface-white px-4 py-4">
+    <div class="flex flex-col gap-1">
+      <a href="index.html" class="px-4 py-3 rounded-xl text-on-surface font-medium text-sm hover:bg-surface nav-link" onclick="closeMobileMenu()">Ana Sayfa</a>
+      <a href="index.html#urun-gruplari" class="px-4 py-3 rounded-xl text-secondary font-semibold text-sm bg-secondary-pale">Ürün Grupları</a>
+      <a href="index.html#iletisim" class="btn-primary mt-2 flex items-center justify-center gap-2 bg-secondary text-white font-semibold text-sm px-5 py-3 rounded-xl hover:bg-secondary-light" onclick="closeMobileMenu()">Kurumsal Teklif Al</a>
+    </div>
+  </div>
+</header>
+
+<div class="cat-hero">
+  <div class="relative max-w-container mx-auto px-4 md:px-10 py-12 md:py-16">
+    <nav class="breadcrumb-nav">
+      <a href="index.html">Ana Sayfa</a><span class="breadcrumb-sep">/</span>
+      <a href="index.html#urun-gruplari">Ürün Grupları</a><span class="breadcrumb-sep">/</span>
+      <span style="color:rgba(255,255,255,0.7);">Gıda Ürünleri</span>
+    </nav>
+    <div class="cat-hero-icon"><span class="ms text-secondary" style="font-size:32px; font-variation-settings:'FILL' 0,'wght' 300;">restaurant</span></div>
+    <h1 class="font-extrabold text-white mb-3" style="font-size:clamp(26px,4vw,44px); letter-spacing:-0.025em; line-height:1.1;">Gıda Ürünleri</h1>
+    <p class="text-white/55 max-w-xl leading-relaxed" style="font-size:16px;">Otel, restoran, yurt ve toplu yemek tesisleri için temel gıda malzemeleri, mutfak sarf ürünleri ve ambalaj malzemeleri. Toplu alım seçenekleri ile.</p>
+    <div class="flex flex-wrap gap-2 mt-8">
+      <a href="#temel-gida" class="cat-nav-pill cat-nav-pill-active">Temel Gıda</a>
+      <a href="#icecek" class="cat-nav-pill cat-nav-pill-idle">İçecek Malzemeleri</a>
+      <a href="#ambalaj" class="cat-nav-pill cat-nav-pill-idle">Ambalaj & Streç</a>
+      <a href="#bardak" class="cat-nav-pill cat-nav-pill-idle">Bardak & Karton</a>
+    </div>
+  </div>
+</div>
+
+<section class="section-gap bg-surface">
+  <div class="max-w-container mx-auto px-4 md:px-10">
+
+    <!-- Temel Gıda -->
+    <div class="mb-10" id="temel-gida" data-reveal data-delay="0">
+      <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-4"><span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Temel Gıda</span></div>
+      <h2 class="font-bold text-primary mb-2" style="font-size:clamp(22px,2.5vw,30px); letter-spacing:-0.02em;">Temel Gıda Malzemeleri</h2>
+      <p class="text-on-surface-muted text-body max-w-2xl leading-relaxed">Toplu tüketim tesisleri için büyük ambalaj şeker, tuz ve benzeri temel ürünler.</p>
+    </div>
+    <div class="overflow-x-auto rounded-card-lg border border-outline/40 shadow-ambient bg-surface-white mb-12" data-reveal data-delay="80">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b border-outline/40 bg-surface">
+            <th class="py-4 px-6 text-on-surface-muted font-bold" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Ürün Kodu</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Ürün Adı</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold hidden sm:table-cell" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Gramaj</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold hidden md:table-cell" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Koli</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold text-right" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Bilgi</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-outline/30">
+          <tr class="prod-row"><td class="py-4 px-6 text-on-surface-muted font-mono text-sm">GDA-101</td><td class="py-4 px-6"><div class="font-semibold text-primary text-sm">Toz Şeker – Küp Şeker</div><div class="text-on-surface-muted text-xs mt-0.5">Toplu paket, 5 kg / 10 kg / 25 kg çuval</div></td><td class="py-4 px-6 text-on-surface-muted text-sm hidden sm:table-cell">5 kg / 25 kg</td><td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Koli / Çuval</td><td class="py-4 px-6 text-right"><a href="index.html#iletisim" class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Teklif Al</a></td></tr>
+          <tr class="prod-row"><td class="py-4 px-6 text-on-surface-muted font-mono text-sm">GDA-102</td><td class="py-4 px-6"><div class="font-semibold text-primary text-sm">Tuz – İyotlu, İnce</div><div class="text-on-surface-muted text-xs mt-0.5">Mutfak ve endüstriyel kullanım</div></td><td class="py-4 px-6 text-on-surface-muted text-sm hidden sm:table-cell">1 kg / 25 kg</td><td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Koli / Çuval</td><td class="py-4 px-6 text-right"><a href="index.html#iletisim" class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Teklif Al</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- İçecek -->
+    <div class="mb-10" id="icecek" data-reveal data-delay="0">
+      <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-4"><span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">İçecek Malzemeleri</span></div>
+      <h2 class="font-bold text-primary mb-2" style="font-size:clamp(22px,2.5vw,30px); letter-spacing:-0.02em;">Çay, Kahve & İçecek Malzemeleri</h2>
+    </div>
+    <div class="overflow-x-auto rounded-card-lg border border-outline/40 shadow-ambient bg-surface-white mb-12" data-reveal data-delay="80">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b border-outline/40 bg-surface">
+            <th class="py-4 px-6 text-on-surface-muted font-bold" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Ürün Kodu</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Ürün Adı</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold hidden sm:table-cell" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Gramaj</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold hidden md:table-cell" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Koli</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold text-right" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Bilgi</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-outline/30">
+          <tr class="prod-row"><td class="py-4 px-6 text-on-surface-muted font-mono text-sm">GDA-201</td><td class="py-4 px-6"><div class="font-semibold text-primary text-sm">Dökme Çay</div><div class="text-on-surface-muted text-xs mt-0.5">Toplu ambalaj, Karadeniz harmanı</div></td><td class="py-4 px-6 text-on-surface-muted text-sm hidden sm:table-cell">500 g / 1 kg / 5 kg</td><td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Koli (12 Paket)</td><td class="py-4 px-6 text-right"><a href="index.html#iletisim" class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Teklif Al</a></td></tr>
+          <tr class="prod-row"><td class="py-4 px-6 text-on-surface-muted font-mono text-sm">GDA-202</td><td class="py-4 px-6"><div class="font-semibold text-primary text-sm">Filtre Kahve – Çözünür Kahve</div><div class="text-on-surface-muted text-xs mt-0.5">Kafe ve otel tipi toplu ambalaj</div></td><td class="py-4 px-6 text-on-surface-muted text-sm hidden sm:table-cell">500 g / 1 kg</td><td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Koli</td><td class="py-4 px-6 text-right"><a href="index.html#iletisim" class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Teklif Al</a></td></tr>
+          <tr class="prod-row"><td class="py-4 px-6 text-on-surface-muted font-mono text-sm">GDA-203</td><td class="py-4 px-6"><div class="font-semibold text-primary text-sm">Bitki Çayı Poşet – Karışık</div><div class="text-on-surface-muted text-xs mt-0.5">25'li kutu</div></td><td class="py-4 px-6 text-on-surface-muted text-sm hidden sm:table-cell">25'li kutu</td><td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Koli (24 Kutu)</td><td class="py-4 px-6 text-right"><a href="index.html#iletisim" class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Teklif Al</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Ambalaj + Bardak -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-reveal data-delay="0">
+      <div id="ambalaj">
+        <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-4"><span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Ambalaj & Streç</span></div>
+        <h2 class="font-bold text-primary mb-4" style="font-size:clamp(20px,2vw,26px); letter-spacing:-0.02em;">Streç Film & Alüminyum Folyo</h2>
+        <div class="bg-surface-white border border-outline/40 rounded-card-lg overflow-hidden shadow-ambient">
+          <table class="w-full text-left">
+            <tbody class="divide-y divide-outline/30">
+              <tr class="prod-row"><td class="py-3.5 px-5"><div class="font-semibold text-primary text-sm">Streç Film – Mutfak Tipi</div><div class="text-on-surface-muted text-xs">30 cm × 300 m, PVC</div></td><td class="py-3.5 px-5 text-on-surface-muted text-sm">Rulo</td><td class="py-3.5 px-5 text-right"><a href="index.html#iletisim" class="text-secondary font-semibold text-sm hover:text-primary transition-colors">Al</a></td></tr>
+              <tr class="prod-row"><td class="py-3.5 px-5"><div class="font-semibold text-primary text-sm">Alüminyum Folyo – Endüstriyel</div><div class="text-on-surface-muted text-xs">30 cm × 300 m</div></td><td class="py-3.5 px-5 text-on-surface-muted text-sm">Rulo</td><td class="py-3.5 px-5 text-right"><a href="index.html#iletisim" class="text-secondary font-semibold text-sm hover:text-primary transition-colors">Al</a></td></tr>
+              <tr class="prod-row"><td class="py-3.5 px-5"><div class="font-semibold text-primary text-sm">Yağlı Kağıt – Mutfak</div><div class="text-on-surface-muted text-xs">30 cm × 100 m</div></td><td class="py-3.5 px-5 text-on-surface-muted text-sm">Rulo</td><td class="py-3.5 px-5 text-right"><a href="index.html#iletisim" class="text-secondary font-semibold text-sm hover:text-primary transition-colors">Al</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="bardak">
+        <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-4"><span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Bardak & Karton</span></div>
+        <h2 class="font-bold text-primary mb-4" style="font-size:clamp(20px,2vw,26px); letter-spacing:-0.02em;">Tek Kullanımlık Bardak & Kap</h2>
+        <div class="bg-surface-white border border-outline/40 rounded-card-lg overflow-hidden shadow-ambient">
+          <table class="w-full text-left">
+            <tbody class="divide-y divide-outline/30">
+              <tr class="prod-row"><td class="py-3.5 px-5"><div class="font-semibold text-primary text-sm">Karton Kahve Bardağı – 6 oz</div><div class="text-on-surface-muted text-xs">Beyaz, 100 adet/paket</div></td><td class="py-3.5 px-5 text-on-surface-muted text-sm">Koli (20 P)</td><td class="py-3.5 px-5 text-right"><a href="index.html#iletisim" class="text-secondary font-semibold text-sm hover:text-primary transition-colors">Al</a></td></tr>
+              <tr class="prod-row"><td class="py-3.5 px-5"><div class="font-semibold text-primary text-sm">Plastik Soğuk İçecek Bardağı – 9 oz</div><div class="text-on-surface-muted text-xs">Şeffaf PET, 100 adet</div></td><td class="py-3.5 px-5 text-on-surface-muted text-sm">Koli (20 P)</td><td class="py-3.5 px-5 text-right"><a href="index.html#iletisim" class="text-secondary font-semibold text-sm hover:text-primary transition-colors">Al</a></td></tr>
+              <tr class="prod-row"><td class="py-3.5 px-5"><div class="font-semibold text-primary text-sm">Karton Yemek Kutusu – 1000 ml</div><div class="text-on-surface-muted text-xs">Mikrodalgaya uygun</div></td><td class="py-3.5 px-5 text-on-surface-muted text-sm">Koli (50 Adet)</td><td class="py-3.5 px-5 text-right"><a href="index.html#iletisim" class="text-secondary font-semibold text-sm hover:text-primary transition-colors">Al</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-gap bg-surface-container">
+  <div class="max-w-container mx-auto px-4 md:px-10">
+    <div class="mb-8" data-reveal data-delay="0"><h2 class="font-bold text-primary mb-1" style="font-size:clamp(20px,2vw,26px); letter-spacing:-0.015em;">Diğer Ürün Grupları</h2></div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3" data-reveal data-delay="80">
+      <a href="dezenfektan.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">sanitizer</span></div><div class="font-semibold text-primary text-xs leading-snug">Dezenfektan</div></a>
+      <a href="kagit-urunleri.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">inventory_2</span></div><div class="font-semibold text-primary text-xs leading-snug">Kağıt Ürünleri</div></a>
+      <a href="kimyasallar.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">science</span></div><div class="font-semibold text-primary text-xs leading-snug">Kimyasallar</div></a>
+      <a href="sarf-malzeme.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">shopping_bag</span></div><div class="font-semibold text-primary text-xs leading-snug">Sarf Malzeme</div></a>
+      <a href="cop-poseti.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">delete</span></div><div class="font-semibold text-primary text-xs leading-snug">Çöp Poşeti</div></a>
+      <a href="kirtasiye.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">print</span></div><div class="font-semibold text-primary text-xs leading-snug">Kırtasiye & Baskı</div></a>
+      <a href="ekipmanlar.html" class="cat-card bg-surface-white border border-outline/50 rounded-card p-4 flex flex-col items-center text-center shadow-ambient"><div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center mb-3"><span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">cleaning_services</span></div><div class="font-semibold text-primary text-xs leading-snug">Ekipmanlar</div></a>
+    </div>
+  </div>
+</section>
+
+<section class="page-cta py-16 md:py-20">
+  <div class="max-w-container mx-auto px-4 md:px-10 text-center">
+    <div class="inline-flex items-center gap-2 bg-white/8 border border-white/12 text-white/70 px-3 py-1 rounded-full mb-6" style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Kurumsal Teklif</div>
+    <h2 class="font-extrabold text-white mb-4" style="font-size:clamp(24px,3vw,38px); letter-spacing:-0.025em; line-height:1.15;">Gıda Siparişleriniz İçin<br>Toplu Fiyat Alın</h2>
+    <p class="text-white/50 max-w-lg mx-auto mb-8 leading-relaxed" style="font-size:16px;">Otel, restoran ve yurt tesislerine özel periyodik gıda tedarik planlaması yapıyoruz.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="index.html#iletisim" class="hero-btn-primary"><span class="ms hero-btn-icon">request_quote</span>Kurumsal Teklif Al</a>
+      <a href="tel:03123870775" class="hero-btn-outline"><span class="ms hero-btn-icon">phone</span>0312 387 07 75</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-primary-light border-t border-white/8">
+  <div class="max-w-container mx-auto px-4 md:px-10 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-xl bg-secondary flex items-center justify-center"><span class="ms text-white" style="font-size:18px; font-variation-settings:'FILL' 1,'wght' 500;">water_drop</span></div><div><div class="font-bold text-white text-sm">ANTEM Kurumsal Temizlik</div><div class="text-white/40 text-xs">Macun Mah. 177. Cadde Timko 2 No: 19/G-4 Yenimahalle/Ankara</div></div></div>
+      <div class="flex items-center gap-6"><a href="tel:03123870775" class="text-white/50 text-sm hover:text-secondary transition-colors">0312 387 07 75</a><a href="mailto:info@antemtemizliktedarik.com" class="text-white/50 text-sm hover:text-secondary transition-colors">info@antemtemizliktedarik.com</a></div>
+    </div>
+    <div class="border-t border-white/8 mt-8 pt-6 text-center"><p class="text-white/30 text-sm">© 2026 ANTEM Kurumsal Temizlik Tedarik. Tüm hakları saklıdır.</p></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

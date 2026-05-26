@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANTEM Kurumsal Temizlik Tedarik – Profesyonel Hijyen ve Temizlik Ürünleri</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f1621',
+            'primary-light': '#1e2a3a',
+            secondary: '#016a61',
+            'secondary-light': '#018a7e',
+            'secondary-pale': '#e6f5f3',
+            surface: '#f7f9fb',
+            'surface-low': '#f2f4f6',
+            'surface-container': '#eceef0',
+            'surface-high': '#e6e8ea',
+            'surface-white': '#ffffff',
+            'on-surface': '#191c1e',
+            'on-surface-muted': '#45464d',
+            'outline': '#c6c6cd',
+            'outline-dark': '#7e7576',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          fontSize: {
+            'display':    ['52px', { lineHeight: '1.15', letterSpacing: '-0.025em', fontWeight: '700' }],
+            'display-md': ['40px', { lineHeight: '1.2',  letterSpacing: '-0.02em',  fontWeight: '700' }],
+            'display-sm': ['32px', { lineHeight: '1.25', letterSpacing: '-0.02em',  fontWeight: '700' }],
+            'headline':   ['26px', { lineHeight: '1.35', letterSpacing: '-0.01em',  fontWeight: '600' }],
+            'headline-sm':['20px', { lineHeight: '1.4',  letterSpacing: '-0.01em',  fontWeight: '600' }],
+            'body-lg':    ['17px', { lineHeight: '1.65', letterSpacing: '0',         fontWeight: '400' }],
+            'body':       ['15px', { lineHeight: '1.6',  letterSpacing: '0',         fontWeight: '400' }],
+            'label':      ['12px', { lineHeight: '1',    letterSpacing: '0.08em',   fontWeight: '700' }],
+          },
+          borderRadius: {
+            'card':    '20px',
+            'card-lg': '28px',
+          },
+          boxShadow: {
+            'ambient':    '0 4px 24px rgba(15, 22, 33, 0.06)',
+            'ambient-md': '0 8px 40px rgba(15, 22, 33, 0.10)',
+            'ambient-lg': '0 16px 64px rgba(15, 22, 33, 0.12)',
+          },
+          maxWidth: {
+            'container': '1280px',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="antialiased">
+
+<!-- ================================================================
+     COMPONENT: Navbar
+     File: index.html | Styles: css/style.css (.nav-link, #mobile-menu)
+     JS: js/main.js (mobile menu toggle)
+     ================================================================ -->
+<header id="header" class="sticky top-0 z-50 bg-surface-white/95 backdrop-blur-sm border-b border-outline/60 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]">
+  <div class="max-w-container mx-auto px-4 md:px-10 h-[72px] flex items-center justify-between gap-4">
+
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center gap-3 shrink-0">
+      <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center">
+        <span class="ms text-on-primary" style="font-size:20px; font-variation-settings:'FILL' 1,'wght' 500;">water_drop</span>
+      </div>
+      <div class="leading-tight">
+        <div class="font-bold text-primary tracking-tight" style="font-size:17px; letter-spacing:-0.02em;">ANTEM</div>
+        <div class="text-on-surface-muted" style="font-size:10px; letter-spacing:0.06em; font-weight:600; text-transform:uppercase;">Kurumsal Temizlik</div>
+      </div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-1">
+      <a href="index.html" class="nav-link px-4 py-2 rounded-lg text-primary font-semibold bg-secondary-pale text-secondary text-sm">Ana Sayfa</a>
+      <a href="#urun-gruplari" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Ürün Grupları</a>
+      <a href="katalog.html" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Katalog</a>
+      <a href="#sektorler" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Sektörler</a>
+      <a href="#hakkimizda" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Hakkımızda</a>
+      <a href="#iletisim" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">İletişim</a>
+    </nav>
+
+    <!-- CTA + Mobile Toggle -->
+    <div class="flex items-center gap-3">
+      <a href="#iletisim" class="btn-primary hidden md:inline-flex items-center gap-2 bg-secondary text-white font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-secondary-light shadow-sm">
+        <span class="ms" style="font-size:18px; font-variation-settings:'FILL' 0,'wght' 300;">request_quote</span>
+        Teklif Al
+      </a>
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-surface text-primary" aria-label="Menüyü aç" aria-expanded="false">
+        <span class="ms" style="font-size:24px;">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden border-t border-outline/50 bg-surface-white px-4 py-4">
+    <div class="flex flex-col gap-1">
+      <a href="index.html" class="px-4 py-3 rounded-xl text-secondary font-semibold text-sm bg-secondary-pale">Ana Sayfa</a>
+      <a href="#urun-gruplari" class="px-4 py-3 rounded-xl text-on-surface font-medium text-sm hover:bg-surface nav-link" onclick="closeMobileMenu()">Ürün Grupları</a>
+      <a href="katalog.html" class="px-4 py-3 rounded-xl text-on-surface font-medium text-sm hover:bg-surface nav-link" onclick="closeMobileMenu()">Katalog</a>
+      <a href="#sektorler" class="px-4 py-3 rounded-xl text-on-surface font-medium text-sm hover:bg-surface nav-link" onclick="closeMobileMenu()">Sektörler</a>
+      <a href="#hakkimizda" class="px-4 py-3 rounded-xl text-on-surface font-medium text-sm hover:bg-surface nav-link" onclick="closeMobileMenu()">Hakkımızda</a>
+      <a href="#iletisim" class="px-4 py-3 rounded-xl text-on-surface font-medium text-sm hover:bg-surface nav-link" onclick="closeMobileMenu()">İletişim</a>
+      <a href="#iletisim" class="btn-primary mt-2 flex items-center justify-center gap-2 bg-secondary text-white font-semibold text-sm px-5 py-3 rounded-xl hover:bg-secondary-light">
+        <span class="ms" style="font-size:18px;">request_quote</span>
+        Kurumsal Teklif Al
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================================================================
+     COMPONENT: HeroSection — Premium Full-Width Dark Background
+     Styles: css/style.css (.hero-section, .hero-chip, .hero-content-wrap, etc.)
+     ================================================================ -->
+<section class="hero-section" id="hero">
+
+  <!-- Foreground: main content -->
+  <div class="hero-content-wrap">
+
+    <!-- Eyebrow badge -->
+    <div class="hero-enter-1 hero-eyebrow">
+      <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+      2000'den Beri Güvenilir Tedarikçi
+    </div>
+
+    <!-- Headline -->
+    <h1 class="hero-enter-2 hero-headline">
+      Kurumsal Temizlik ve Hijyen Ürünleri<br class="hidden sm:block" />
+      Tedarikinde <span class="hero-headline-accent">Güvenilir İş Ortağınız</span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="hero-enter-3 hero-subtitle">
+      Antem, işletmelerin temizlik, hijyen ve sarf malzeme ihtiyaçları için geniş ürün yelpazesi, düzenli tedarik ve kurumsal çözüm yaklaşımı sunar.
+    </p>
+
+    <!-- CTA buttons -->
+    <div class="hero-enter-4 hero-cta-row">
+      <a href="#iletisim" class="hero-btn-primary">
+        <span class="ms hero-btn-icon">request_quote</span>
+        Teklif Al
+      </a>
+      <a href="#urun-gruplari" class="hero-btn-outline">
+        <span class="ms hero-btn-icon">category</span>
+        Ürün Gruplarını İncele
+      </a>
+    </div>
+
+    <!-- Trust badges -->
+    <div class="hero-enter-5 hero-trust-row">
+      <div class="hero-trust-item">
+        <span class="ms hero-trust-icon">workspace_premium</span>
+        25+ Yıl Deneyim
+      </div>
+      <div class="hero-trust-item">
+        <span class="ms hero-trust-icon">inventory_2</span>
+        1000+ Ürün Seçeneği
+      </div>
+      <div class="hero-trust-item">
+        <span class="ms hero-trust-icon">scale</span>
+        Toptan Tedarik
+      </div>
+      <div class="hero-trust-item">
+        <span class="ms hero-trust-icon">local_shipping</span>
+        Hızlı Teslimat
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================================================================
+     COMPONENT: ProductGroupsSection
+     Styles: css/style.css (.card-hover, .card-icon)
+     ================================================================ -->
+<section class="section-gap bg-surface" id="urun-gruplari">
+  <div class="max-w-container mx-auto px-4 md:px-10">
+
+    <!-- Section header -->
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12" data-reveal data-delay="0">
+      <div>
+        <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-4">
+          <span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Ürün Portföyü</span>
+        </div>
+        <h2 class="font-bold text-primary mb-3" style="font-size:clamp(26px, 3vw, 36px); letter-spacing:-0.02em;">Ürün Grupları</h2>
+        <p class="text-on-surface-muted max-w-2xl leading-relaxed text-body-lg">
+          Tüm kurumsal hijyen ve temizlik ihtiyaçlarınızı tek çatı altında karşılıyoruz. Her kategoride yüksek hacimli, düzenli tedarik çözümleri sunuyoruz.
+        </p>
+      </div>
+      <a href="katalog.html" class="hidden md:inline-flex shrink-0 items-center gap-2 text-secondary font-bold text-sm hover:underline">
+        Tüm Kataloğu İncele
+        <span class="ms" style="font-size:18px;">arrow_forward</span>
+      </a>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <!-- Dezenfektanlar – Large card (spans 2 cols on lg) -->
+      <div class="lg:col-span-2 bg-surface-white border border-outline/60 rounded-card-lg p-8 card-hover shadow-ambient flex flex-col justify-between min-h-[260px]" data-reveal data-delay="0">
+        <div>
+          <div class="card-icon w-14 h-14 rounded-2xl bg-secondary-pale flex items-center justify-center mb-5">
+            <span class="ms text-secondary" style="font-size:30px; font-variation-settings:'FILL' 0,'wght' 300;">sanitizer</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2 text-headline-sm">Dezenfektan Ürünleri</h3>
+          <p class="text-on-surface-muted text-body leading-relaxed max-w-lg">
+            El ve cilt dezenfektanları, yüzey dezenfektanları, gıda alanları için özel formüller. Sağlık Bakanlığı onaylı geniş spektrumlu hijyen çözümleri. Hastaneler, oteller ve gıda üretim tesisleri için.
+          </p>
+        </div>
+        <div class="mt-6">
+          <a href="dezenfektan.html" class="inline-flex items-center gap-2 bg-surface-container border border-outline/60 text-primary font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-secondary-pale hover:border-secondary/30 hover:text-secondary transition-all">
+            Grubu İncele <span class="ms" style="font-size:16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Kağıt Ürünleri -->
+      <div class="bg-surface-white border border-outline/60 rounded-card-lg p-8 card-hover shadow-ambient flex flex-col justify-between min-h-[260px]" data-reveal data-delay="90">
+        <div>
+          <div class="card-icon w-14 h-14 rounded-2xl bg-secondary-pale flex items-center justify-center mb-5">
+            <span class="ms text-secondary" style="font-size:30px; font-variation-settings:'FILL' 0,'wght' 300;">inventory_2</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2 text-headline-sm">Endüstriyel Kağıt Ürünleri</h3>
+          <p class="text-on-surface-muted text-body leading-relaxed">
+            Z katlama havlular, jumbo rulolar, muayene örtüleri, dispenser peçeteler. Yüksek emicilikte toplu alım çözümleri.
+          </p>
+        </div>
+        <div class="mt-6">
+          <a href="kagit-urunleri.html" class="inline-flex items-center gap-2 bg-surface-container border border-outline/60 text-primary font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-secondary-pale hover:border-secondary/30 hover:text-secondary transition-all">
+            Grubu İncele <span class="ms" style="font-size:16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Temizlik Kimyasalları -->
+      <div class="bg-surface-white border border-outline/60 rounded-card-lg p-8 card-hover shadow-ambient flex flex-col justify-between min-h-[240px]" data-reveal data-delay="0">
+        <div>
+          <div class="card-icon w-14 h-14 rounded-2xl bg-secondary-pale flex items-center justify-center mb-5">
+            <span class="ms text-secondary" style="font-size:30px; font-variation-settings:'FILL' 0,'wght' 300;">science</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2 text-headline-sm">Temizlik Detarjanları</h3>
+          <p class="text-on-surface-muted text-body leading-relaxed">
+            Endüstriyel yağ çözücüler, zemin bakım ürünleri, yüzey temizleyiciler. Falcon ve Truwa markaları.
+          </p>
+        </div>
+        <div class="mt-6">
+          <a href="kimyasallar.html" class="inline-flex items-center gap-2 bg-surface-container border border-outline/60 text-primary font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-secondary-pale hover:border-secondary/30 hover:text-secondary transition-all">
+            Grubu İncele <span class="ms" style="font-size:16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sarf Malzemeler -->
+      <div class="bg-surface-white border border-outline/60 rounded-card-lg p-8 card-hover shadow-ambient flex flex-col justify-between min-h-[240px]" data-reveal data-delay="80">
+        <div>
+          <div class="card-icon w-14 h-14 rounded-2xl bg-secondary-pale flex items-center justify-center mb-5">
+            <span class="ms text-secondary" style="font-size:30px; font-variation-settings:'FILL' 0,'wght' 300;">shopping_bag</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2 text-headline-sm">Endüstriyel Sarf Malzemeler</h3>
+          <p class="text-on-surface-muted text-body leading-relaxed">
+            Tek kullanımlık eldivenler, bone, galoş, maske ve koruyucu ekipmanlar. Toplu ambalajlarda güvenilir tedarik.
+          </p>
+        </div>
+        <div class="mt-6">
+          <a href="sarf-malzeme.html" class="inline-flex items-center gap-2 bg-surface-container border border-outline/60 text-primary font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-secondary-pale hover:border-secondary/30 hover:text-secondary transition-all">
+            Grubu İncele <span class="ms" style="font-size:16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Çöp Poşetleri -->
+      <div class="bg-surface-white border border-outline/60 rounded-card-lg p-8 card-hover shadow-ambient flex flex-col justify-between min-h-[240px]" data-reveal data-delay="160">
+        <div>
+          <div class="card-icon w-14 h-14 rounded-2xl bg-secondary-pale flex items-center justify-center mb-5">
+            <span class="ms text-secondary" style="font-size:30px; font-variation-settings:'FILL' 0,'wght' 300;">delete</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2 text-headline-sm">Endüstriyel Çöp Poşetleri</h3>
+          <p class="text-on-surface-muted text-body leading-relaxed">
+            Farklı kapasitelerde sızdırmaz çöp torbaları. Endüstriyel tesisler, otel ve restoran grupları için yüksek hacimli stok.
+          </p>
+        </div>
+        <div class="mt-6">
+          <a href="cop-poseti.html" class="inline-flex items-center gap-2 bg-surface-container border border-outline/60 text-primary font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-secondary-pale hover:border-secondary/30 hover:text-secondary transition-all">
+            Grubu İncele <span class="ms" style="font-size:16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gıda Ürünleri -->
+      <div class="bg-surface-white border border-outline/60 rounded-card-lg p-8 card-hover shadow-ambient flex flex-col justify-between min-h-[240px]" data-reveal data-delay="0">
+        <div>
+          <div class="card-icon w-14 h-14 rounded-2xl bg-secondary-pale flex items-center justify-center mb-5">
+            <span class="ms text-secondary" style="font-size:30px; font-variation-settings:'FILL' 0,'wght' 300;">restaurant</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2 text-headline-sm">Gıda Ürünleri</h3>
+          <p class="text-on-surface-muted text-body leading-relaxed">
+            Restoran, otel ve mutfak tesisleri için gıda sınıfı temizlik ve hijyen ürünleri. Toplu tedarik seçenekleri.
+          </p>
+        </div>
+        <div class="mt-6">
+          <a href="gida.html" class="inline-flex items-center gap-2 bg-surface-container border border-outline/60 text-primary font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-secondary-pale hover:border-secondary/30 hover:text-secondary transition-all">
+            Grubu İncele <span class="ms" style="font-size:16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Kırtasiye & Baskılı – spans 2 cols on lg -->
+      <div class="lg:col-span-2 bg-gradient-to-br from-primary to-primary-light border border-primary rounded-card-lg p-8 card-hover shadow-ambient-md flex flex-col md:flex-row justify-between gap-6 min-h-[200px]" data-reveal data-delay="0">
+        <div class="flex-1">
+          <div class="card-icon w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-5">
+            <span class="ms text-white" style="font-size:30px; font-variation-settings:'FILL' 0,'wght' 300;">print</span>
+          </div>
+          <h3 class="font-bold text-white mb-2 text-headline-sm">Kırtasiye & Baskılı Ürünler</h3>
+          <p class="text-white/60 text-body leading-relaxed max-w-lg">
+            Kurumsal ofis kırtasiyesi, katalog, broşür baskısı ve özelleştirilmiş kurumsal malzemeler. Markanıza özel çözümler.
+          </p>
+        </div>
+        <div class="flex items-end">
+          <a href="kirtasiye.html" class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-white/20 transition-all">
+            Grubu İncele <span class="ms" style="font-size:16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Temizlik Ekipmanları -->
+      <div class="bg-surface-white border border-outline/60 rounded-card-lg p-8 card-hover shadow-ambient flex flex-col justify-between min-h-[240px]" data-reveal data-delay="90">
+        <div>
+          <div class="card-icon w-14 h-14 rounded-2xl bg-secondary-pale flex items-center justify-center mb-5">
+            <span class="ms text-secondary" style="font-size:30px; font-variation-settings:'FILL' 0,'wght' 300;">cleaning_services</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2 text-headline-sm">Temizlik Ekipmanları</h3>
+          <p class="text-on-surface-muted text-body leading-relaxed">
+            Profesyonel temizlik arabaları, mop sistemleri, kovalar ve ekipman aksesuarları.
+          </p>
+        </div>
+        <div class="mt-6">
+          <a href="ekipmanlar.html" class="inline-flex items-center gap-2 bg-surface-container border border-outline/60 text-primary font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-secondary-pale hover:border-secondary/30 hover:text-secondary transition-all">
+            Grubu İncele <span class="ms" style="font-size:16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Mobile CTA -->
+    <div class="mt-8 text-center md:hidden">
+      <a href="katalog.html" class="inline-flex items-center gap-2 text-secondary font-bold hover:underline">
+        Tüm Kataloğu İncele <span class="ms" style="font-size:18px;">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     COMPONENT: AboutSection
+     Styles: css/style.css
+     JS: data-counter triggers count-up animation
+     ================================================================ -->
+<section class="section-gap bg-surface-container" id="hakkimizda">
+  <div class="max-w-container mx-auto px-4 md:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      <!-- Left: Stats visual -->
+      <div class="order-2 lg:order-1">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-surface-white rounded-card-lg p-7 shadow-ambient border border-outline/40" data-reveal data-delay="0">
+            <div class="text-secondary font-extrabold mb-1" style="font-size:38px; letter-spacing:-0.03em;">
+              <span data-counter="25" data-counter-suffix="+">25+</span>
+            </div>
+            <div class="text-on-surface font-semibold text-sm">Yıllık Sektör<br />Tecrübesi</div>
+          </div>
+          <div class="bg-primary rounded-card-lg p-7 shadow-ambient-md" data-reveal data-delay="100">
+            <div class="text-white font-extrabold mb-1" style="font-size:38px; letter-spacing:-0.03em;">
+              <span data-counter="1000" data-counter-suffix="+">1000+</span>
+            </div>
+            <div class="text-white/70 font-semibold text-sm">Ürün Kalemi<br />Aktif Stokta</div>
+          </div>
+          <div class="bg-secondary rounded-card-lg p-7 shadow-ambient-md" data-reveal data-delay="100">
+            <div class="text-white font-extrabold mb-1" style="font-size:38px; letter-spacing:-0.03em;">
+              <span data-counter="500" data-counter-suffix="+">500+</span>
+            </div>
+            <div class="text-white/70 font-semibold text-sm">Kurumsal<br />Müşteri</div>
+          </div>
+          <div class="bg-surface-white rounded-card-lg p-7 shadow-ambient border border-outline/40" data-reveal data-delay="200">
+            <div class="text-secondary font-extrabold mb-1" style="font-size:38px; letter-spacing:-0.03em;">
+              <span data-counter="81">81</span>
+            </div>
+            <div class="text-on-surface font-semibold text-sm">İle Teslimat<br />Kapasitesi</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Text -->
+      <div class="order-1 lg:order-2">
+        <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-5" data-reveal data-delay="0">
+          <span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Hakkımızda</span>
+        </div>
+        <h2 class="font-bold text-primary mb-5" style="font-size:clamp(26px, 3vw, 36px); letter-spacing:-0.02em;" data-reveal data-delay="80">
+          2000'den Beri Kurumsal Temizlik Tedarikinin Güvenilir İsmi
+        </h2>
+        <p class="text-on-surface-muted text-body-lg leading-relaxed mb-5" data-reveal data-delay="160">
+          ANTEM Kurumsal Temizlik, Ankara merkezli olarak 2000 yılından bu yana endüstriyel temizlik ve hijyen ürünleri tedarikinde faaliyet göstermektedir. Oteller, hastaneler, fabrikalar ve kamu kurumları başta olmak üzere Türkiye genelindeki kurumsal müşterilerimize geniş ürün portföyümüzle hizmet veriyoruz.
+        </p>
+        <p class="text-on-surface-muted text-body-lg leading-relaxed mb-8" data-reveal data-delay="220">
+          Güçlü lojistik altyapımız, planlı stok yönetimimiz ve müşteri odaklı satış ekibimizle; kurumsal alımlarda ihtiyaç duyduğunuz sürekliliği ve güveni sağlıyoruz.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3" data-reveal data-delay="300">
+          <a href="#iletisim" class="btn-primary inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-primary-light text-sm">
+            Bizimle İletişime Geçin
+          </a>
+          <a href="#urun-gruplari" class="btn-secondary inline-flex items-center justify-center gap-2 bg-transparent border-2 border-outline text-primary font-semibold px-6 py-3.5 rounded-xl hover:border-secondary hover:text-secondary text-sm">
+            Ürünlerimizi İnceleyin
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     COMPONENT: WhyChooseUsSection
+     Styles: css/style.css (.card-hover, .card-icon)
+     ================================================================ -->
+<section class="section-gap bg-surface-white" id="neden-biz">
+  <div class="max-w-container mx-auto px-4 md:px-10">
+
+    <div class="text-center mb-14" data-reveal data-delay="0">
+      <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-5">
+        <span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Neden ANTEM?</span>
+      </div>
+      <h2 class="font-bold text-primary mb-4" style="font-size:clamp(26px, 3vw, 36px); letter-spacing:-0.02em;">
+        Kurumsal Tedarik Avantajlarımız
+      </h2>
+      <p class="text-on-surface-muted text-body-lg max-w-2xl mx-auto leading-relaxed">
+        Güvenilir bir B2B tedarik ortağında aramanız gereken her şeyi tek noktada sunuyoruz.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <div class="bg-surface rounded-card-lg p-7 card-hover border border-outline/50 shadow-ambient" data-reveal data-delay="0">
+        <div class="card-icon w-12 h-12 rounded-2xl bg-secondary-pale flex items-center justify-center mb-5">
+          <span class="ms text-secondary" style="font-size:24px; font-variation-settings:'FILL' 0,'wght' 300;">category</span>
+        </div>
+        <h3 class="font-bold text-primary mb-2 text-headline-sm">Geniş Ürün Yelpazesi</h3>
+        <p class="text-on-surface-muted text-body leading-relaxed">
+          1000'i aşkın ürün kaleminde dezenfektanlardan kağıt ürünlerine, kimyasallardan ekipmanlara kadar tüm kategoriler tek tedarikçide.
+        </p>
+      </div>
+
+      <div class="bg-surface rounded-card-lg p-7 card-hover border border-outline/50 shadow-ambient" data-reveal data-delay="80">
+        <div class="card-icon w-12 h-12 rounded-2xl bg-secondary-pale flex items-center justify-center mb-5">
+          <span class="ms text-secondary" style="font-size:24px; font-variation-settings:'FILL' 0,'wght' 300;">scale</span>
+        </div>
+        <h3 class="font-bold text-primary mb-2 text-headline-sm">Toptan Tedarik Kapasitesi</h3>
+        <p class="text-on-surface-muted text-body leading-relaxed">
+          Yüksek hacimli siparişlerde rekabetçi fiyatlandırma ve öncelikli stok ayrımı. Kurumsal hacminize uygun özel fiyat anlaşmaları.
+        </p>
+      </div>
+
+      <div class="bg-surface rounded-card-lg p-7 card-hover border border-outline/50 shadow-ambient" data-reveal data-delay="160">
+        <div class="card-icon w-12 h-12 rounded-2xl bg-secondary-pale flex items-center justify-center mb-5">
+          <span class="ms text-secondary" style="font-size:24px; font-variation-settings:'FILL' 0,'wght' 300;">local_shipping</span>
+        </div>
+        <h3 class="font-bold text-primary mb-2 text-headline-sm">Hızlı ve Planlı Teslimat</h3>
+        <p class="text-on-surface-muted text-body leading-relaxed">
+          Ankara ve çevresi için aynı gün, Türkiye geneline hızlı lojistik. Düzenli teslimat programlarıyla stok kopukluğunu önlüyoruz.
+        </p>
+      </div>
+
+      <div class="bg-surface rounded-card-lg p-7 card-hover border border-outline/50 shadow-ambient" data-reveal data-delay="0">
+        <div class="card-icon w-12 h-12 rounded-2xl bg-secondary-pale flex items-center justify-center mb-5">
+          <span class="ms text-secondary" style="font-size:24px; font-variation-settings:'FILL' 0,'wght' 300;">receipt_long</span>
+        </div>
+        <h3 class="font-bold text-primary mb-2 text-headline-sm">Kurumsal Faturalandırma</h3>
+        <p class="text-on-surface-muted text-body leading-relaxed">
+          Resmi fatura, vadeli ödeme anlaşmaları ve kurumsal muhasebe sisteminize uygun düzenli raporlama desteği.
+        </p>
+      </div>
+
+      <div class="bg-surface rounded-card-lg p-7 card-hover border border-outline/50 shadow-ambient" data-reveal data-delay="80">
+        <div class="card-icon w-12 h-12 rounded-2xl bg-secondary-pale flex items-center justify-center mb-5">
+          <span class="ms text-secondary" style="font-size:24px; font-variation-settings:'FILL' 0,'wght' 300;">inventory</span>
+        </div>
+        <h3 class="font-bold text-primary mb-2 text-headline-sm">Güvenilir Stok Planlama</h3>
+        <p class="text-on-surface-muted text-body leading-relaxed">
+          Aylık tüketim analizlerinize dayalı stok planlama hizmeti. Ürünleriniz her zaman zamanında hazır, tedarik kopukluğu yok.
+        </p>
+      </div>
+
+      <div class="bg-secondary rounded-card-lg p-7 card-hover shadow-ambient-md" data-reveal data-delay="160">
+        <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-5">
+          <span class="ms text-white" style="font-size:24px; font-variation-settings:'FILL' 0,'wght' 300;">support_agent</span>
+        </div>
+        <h3 class="font-bold text-white mb-2 text-headline-sm">Müşteri Odaklı Destek</h3>
+        <p class="text-white/70 text-body leading-relaxed">
+          Satış sonrası destek, teknik bilgi desteği ve ürün seçim danışmanlığıyla her adımda yanınızdayız.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     COMPONENT: IndustriesSection
+     Styles: css/style.css (.card-hover, .card-icon)
+     ================================================================ -->
+<section class="section-gap bg-surface" id="sektorler">
+  <div class="max-w-container mx-auto px-4 md:px-10">
+
+    <div class="text-center mb-14" data-reveal data-delay="0">
+      <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-5">
+        <span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Hizmet Alanlarımız</span>
+      </div>
+      <h2 class="font-bold text-primary mb-4" style="font-size:clamp(26px, 3vw, 36px); letter-spacing:-0.02em;">
+        Hizmet Verdiğimiz Sektörler
+      </h2>
+      <p class="text-on-surface-muted text-body-lg max-w-2xl mx-auto leading-relaxed">
+        Her sektörün kendine özgü hijyen ve temizlik standartlarına uygun, özelleştirilmiş tedarik çözümleri geliştiriyoruz.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+
+      <div class="bg-surface-white border border-outline/50 rounded-card p-6 flex flex-col items-center text-center card-hover shadow-ambient cursor-default" data-reveal data-delay="0">
+        <div class="card-icon w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-4">
+          <span class="ms text-secondary" style="font-size:28px; font-variation-settings:'FILL' 0,'wght' 300;">hotel</span>
+        </div>
+        <div class="font-bold text-primary text-sm">Oteller</div>
+        <div class="text-on-surface-muted text-xs mt-1">& Konaklama Tesisleri</div>
+      </div>
+
+      <div class="bg-surface-white border border-outline/50 rounded-card p-6 flex flex-col items-center text-center card-hover shadow-ambient cursor-default" data-reveal data-delay="60">
+        <div class="card-icon w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-4">
+          <span class="ms text-secondary" style="font-size:28px; font-variation-settings:'FILL' 0,'wght' 300;">restaurant</span>
+        </div>
+        <div class="font-bold text-primary text-sm">Restoranlar</div>
+        <div class="text-on-surface-muted text-xs mt-1">& Kafeler</div>
+      </div>
+
+      <div class="bg-surface-white border border-outline/50 rounded-card p-6 flex flex-col items-center text-center card-hover shadow-ambient cursor-default" data-reveal data-delay="120">
+        <div class="card-icon w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-4">
+          <span class="ms text-secondary" style="font-size:28px; font-variation-settings:'FILL' 0,'wght' 300;">domain</span>
+        </div>
+        <div class="font-bold text-primary text-sm">Ofisler</div>
+        <div class="text-on-surface-muted text-xs mt-1">& Plazalar</div>
+      </div>
+
+      <div class="bg-surface-white border border-outline/50 rounded-card p-6 flex flex-col items-center text-center card-hover shadow-ambient cursor-default" data-reveal data-delay="180">
+        <div class="card-icon w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-4">
+          <span class="ms text-secondary" style="font-size:28px; font-variation-settings:'FILL' 0,'wght' 300;">school</span>
+        </div>
+        <div class="font-bold text-primary text-sm">Okullar</div>
+        <div class="text-on-surface-muted text-xs mt-1">& Üniversiteler</div>
+      </div>
+
+      <div class="bg-surface-white border border-outline/50 rounded-card p-6 flex flex-col items-center text-center card-hover shadow-ambient cursor-default" data-reveal data-delay="0">
+        <div class="card-icon w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-4">
+          <span class="ms text-secondary" style="font-size:28px; font-variation-settings:'FILL' 0,'wght' 300;">local_hospital</span>
+        </div>
+        <div class="font-bold text-primary text-sm">Hastaneler</div>
+        <div class="text-on-surface-muted text-xs mt-1">& Klinikler</div>
+      </div>
+
+      <div class="bg-surface-white border border-outline/50 rounded-card p-6 flex flex-col items-center text-center card-hover shadow-ambient cursor-default" data-reveal data-delay="60">
+        <div class="card-icon w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-4">
+          <span class="ms text-secondary" style="font-size:28px; font-variation-settings:'FILL' 0,'wght' 300;">factory</span>
+        </div>
+        <div class="font-bold text-primary text-sm">Fabrikalar</div>
+        <div class="text-on-surface-muted text-xs mt-1">& Endüstriyel Tesisler</div>
+      </div>
+
+      <div class="bg-surface-white border border-outline/50 rounded-card p-6 flex flex-col items-center text-center card-hover shadow-ambient cursor-default" data-reveal data-delay="120">
+        <div class="card-icon w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-4">
+          <span class="ms text-secondary" style="font-size:28px; font-variation-settings:'FILL' 0,'wght' 300;">cleaning_services</span>
+        </div>
+        <div class="font-bold text-primary text-sm">Temizlik Firmaları</div>
+        <div class="text-on-surface-muted text-xs mt-1">Profesyonel hizmet sağlayıcıları</div>
+      </div>
+
+      <div class="bg-surface-white border border-outline/50 rounded-card p-6 flex flex-col items-center text-center card-hover shadow-ambient cursor-default" data-reveal data-delay="180">
+        <div class="card-icon w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-4">
+          <span class="ms text-secondary" style="font-size:28px; font-variation-settings:'FILL' 0,'wght' 300;">apartment</span>
+        </div>
+        <div class="font-bold text-primary text-sm">Tesis Yönetimi</div>
+        <div class="text-on-surface-muted text-xs mt-1">Facility management firmaları</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     COMPONENT: SupplyProcessSection
+     Styles: css/style.css (.process-line)
+     ================================================================ -->
+<section class="section-gap bg-surface-white" id="surec">
+  <div class="max-w-container mx-auto px-4 md:px-10">
+
+    <div class="text-center mb-14" data-reveal data-delay="0">
+      <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-5">
+        <span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Nasıl Çalışırız</span>
+      </div>
+      <h2 class="font-bold text-primary mb-4" style="font-size:clamp(26px, 3vw, 36px); letter-spacing:-0.02em;">
+        Tedarik Süreci
+      </h2>
+      <p class="text-on-surface-muted text-body-lg max-w-2xl mx-auto leading-relaxed">
+        Kurumsal tedarik sürecinizi 3 adımda basit, şeffaf ve güvenli hale getiriyoruz.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+      <!-- Connecting line on desktop -->
+      <div class="hidden md:block absolute top-[52px] left-[calc(16.66%+32px)] right-[calc(16.66%+32px)] h-px bg-gradient-to-r from-secondary via-secondary/40 to-secondary/10 z-0"></div>
+
+      <!-- Step 1 -->
+      <div class="relative bg-surface border border-outline/50 rounded-card-lg p-8 shadow-ambient flex flex-col items-center text-center z-10" data-reveal data-delay="0">
+        <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mb-6 shadow-ambient-md">
+          <span class="ms text-white" style="font-size:28px; font-variation-settings:'FILL' 0,'wght' 300;">checklist</span>
+        </div>
+        <div class="absolute top-6 left-6 w-7 h-7 rounded-full bg-primary flex items-center justify-center">
+          <span class="text-white font-bold" style="font-size:12px;">1</span>
+        </div>
+        <h3 class="font-bold text-primary mb-3 text-headline-sm">İhtiyaçlarınızı Paylaşın</h3>
+        <p class="text-on-surface-muted text-body leading-relaxed">
+          Tesisinizin ürün ihtiyaçlarını, aylık kullanım hacimlerini ve teslimat beklentilerinizi satış ekibimizle paylaşın.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative bg-surface border border-outline/50 rounded-card-lg p-8 shadow-ambient flex flex-col items-center text-center z-10" data-reveal data-delay="120">
+        <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mb-6 shadow-ambient-md">
+          <span class="ms text-white" style="font-size:28px; font-variation-settings:'FILL' 0,'wght' 300;">request_quote</span>
+        </div>
+        <div class="absolute top-6 left-6 w-7 h-7 rounded-full bg-primary flex items-center justify-center">
+          <span class="text-white font-bold" style="font-size:12px;">2</span>
+        </div>
+        <h3 class="font-bold text-primary mb-3 text-headline-sm">Ürün Listesi / Teklif Alın</h3>
+        <p class="text-on-surface-muted text-body leading-relaxed">
+          Size özel hazırlanan detaylı ürün listesi ve rekabetçi kurumsal fiyat teklifini en kısa sürede iletiyoruz.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative bg-surface border border-outline/50 rounded-card-lg p-8 shadow-ambient flex flex-col items-center text-center z-10" data-reveal data-delay="240">
+        <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mb-6 shadow-ambient-md">
+          <span class="ms text-white" style="font-size:28px; font-variation-settings:'FILL' 0,'wght' 300;">local_shipping</span>
+        </div>
+        <div class="absolute top-6 left-6 w-7 h-7 rounded-full bg-primary flex items-center justify-center">
+          <span class="text-white font-bold" style="font-size:12px;">3</span>
+        </div>
+        <h3 class="font-bold text-primary mb-3 text-headline-sm">Teslimatı Planlayın</h3>
+        <p class="text-on-surface-muted text-body leading-relaxed">
+          Anlaşılan program dahilinde güvenilir lojistik ağımızla ürünlerinizi teslim alın. Düzenli sipariş takibi dahil.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================================================================
+     COMPONENT: TrustIndicatorsSection
+     Styles: css/style.css (.trust-card)
+     ================================================================ -->
+<section class="bg-primary" id="trust">
+  <div class="max-w-container mx-auto px-4 md:px-10 py-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+      <div class="trust-card rounded-card-lg px-6 py-8 text-center" data-reveal data-delay="0">
+        <div class="font-extrabold text-white mb-2" style="font-size:40px; letter-spacing:-0.03em; line-height:1;">1000<span class="text-secondary">+</span></div>
+        <div class="text-white/60 font-semibold text-sm">Ürün Seçeneği</div>
+        <div class="text-white/40 text-xs mt-1">Aktif stokta hazır</div>
+      </div>
+
+      <div class="trust-card rounded-card-lg px-6 py-8 text-center" data-reveal data-delay="80">
+        <div class="font-extrabold text-white mb-2" style="font-size:40px; letter-spacing:-0.03em; line-height:1;"><span class="text-secondary">Toplu</span></div>
+        <div class="text-white/60 font-semibold text-sm">Tedarik Kapasitesi</div>
+        <div class="text-white/40 text-xs mt-1">Yüksek hacimli siparişler</div>
+      </div>
+
+      <div class="trust-card rounded-card-lg px-6 py-8 text-center" data-reveal data-delay="160">
+        <div class="font-extrabold text-white mb-2" style="font-size:40px; letter-spacing:-0.03em; line-height:1;">Hızlı<span class="text-secondary">.</span></div>
+        <div class="text-white/60 font-semibold text-sm">Kurumsal Teslimat</div>
+        <div class="text-white/40 text-xs mt-1">Ankara ve Türkiye geneli</div>
+      </div>
+
+      <div class="trust-card rounded-card-lg px-6 py-8 text-center" data-reveal data-delay="240">
+        <div class="font-extrabold text-white mb-2" style="font-size:40px; letter-spacing:-0.03em; line-height:1;">25<span class="text-secondary">+</span></div>
+        <div class="text-white/60 font-semibold text-sm">Yıllık Tecrübe</div>
+        <div class="text-white/40 text-xs mt-1">Müşteri odaklı destek</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     COMPONENT: CatalogPreviewSection
+     ================================================================ -->
+<section class="section-gap bg-surface-container" id="katalog">
+  <div class="max-w-container mx-auto px-4 md:px-10">
+
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10" data-reveal data-delay="0">
+      <div>
+        <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-4">
+          <span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Örnek Ürünler</span>
+        </div>
+        <h2 class="font-bold text-primary mb-2" style="font-size:clamp(24px, 2.5vw, 32px); letter-spacing:-0.02em;">Öne Çıkan Ürünlerimiz</h2>
+        <p class="text-on-surface-muted text-body">Tedarik portföyümüzden örnek ürün referansları. Tam katalog için teklif alabilirsiniz.</p>
+      </div>
+      <button class="hidden md:inline-flex items-center gap-2 bg-primary text-white font-semibold text-sm px-5 py-3 rounded-xl hover:bg-primary-light transition-colors shadow-ambient">
+        <span class="ms" style="font-size:18px; font-variation-settings:'FILL' 0,'wght' 300;">download</span>
+        Katalog İndir (PDF)
+      </button>
+    </div>
+
+    <div class="overflow-x-auto rounded-card-lg border border-outline/40 shadow-ambient bg-surface-white" data-reveal data-delay="80">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b border-outline/40 bg-surface">
+            <th class="py-4 px-6 text-on-surface-muted font-bold" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Ürün Kodu</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Ürün Adı</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold hidden sm:table-cell" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Kategori</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold hidden md:table-cell" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Ambalaj</th>
+            <th class="py-4 px-6 text-on-surface-muted font-bold text-right" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;">Bilgi</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-outline/30">
+          <tr class="hover:bg-surface-low transition-colors">
+            <td class="py-4 px-6 text-on-surface-muted font-mono text-sm">DZF-001</td>
+            <td class="py-4 px-6 font-semibold text-primary text-sm">El & Cilt Dezenfektanı</td>
+            <td class="py-4 px-6 hidden sm:table-cell">
+              <span class="bg-secondary-pale text-secondary text-xs font-semibold px-2.5 py-1 rounded-full">Dezenfektan</span>
+            </td>
+            <td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">5L Bidon / Koli</td>
+            <td class="py-4 px-6 text-right">
+              <button class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Bilgi Al</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-surface-low transition-colors">
+            <td class="py-4 px-6 text-on-surface-muted font-mono text-sm">KAG-105</td>
+            <td class="py-4 px-6 font-semibold text-primary text-sm">Z Katlama Dispenser Havlu</td>
+            <td class="py-4 px-6 hidden sm:table-cell">
+              <span class="bg-secondary-pale text-secondary text-xs font-semibold px-2.5 py-1 rounded-full">Kağıt Ürünleri</span>
+            </td>
+            <td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Koli (12 Paket)</td>
+            <td class="py-4 px-6 text-right">
+              <button class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Bilgi Al</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-surface-low transition-colors">
+            <td class="py-4 px-6 text-on-surface-muted font-mono text-sm">KIM-042</td>
+            <td class="py-4 px-6 font-semibold text-primary text-sm">Ağır Yağ Çözücü Endüstriyel</td>
+            <td class="py-4 px-6 hidden sm:table-cell">
+              <span class="bg-secondary-pale text-secondary text-xs font-semibold px-2.5 py-1 rounded-full">Kimyasal</span>
+            </td>
+            <td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">20L Bidon</td>
+            <td class="py-4 px-6 text-right">
+              <button class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Bilgi Al</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-surface-low transition-colors">
+            <td class="py-4 px-6 text-on-surface-muted font-mono text-sm">SRF-220</td>
+            <td class="py-4 px-6 font-semibold text-primary text-sm">Tek Kullanımlık Nitril Eldiven</td>
+            <td class="py-4 px-6 hidden sm:table-cell">
+              <span class="bg-secondary-pale text-secondary text-xs font-semibold px-2.5 py-1 rounded-full">Sarf Malzeme</span>
+            </td>
+            <td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Kutu (100 Adet)</td>
+            <td class="py-4 px-6 text-right">
+              <button class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Bilgi Al</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-surface-low transition-colors">
+            <td class="py-4 px-6 text-on-surface-muted font-mono text-sm">COP-880</td>
+            <td class="py-4 px-6 font-semibold text-primary text-sm">Endüstriyel Çöp Torbası (Siyah)</td>
+            <td class="py-4 px-6 hidden sm:table-cell">
+              <span class="bg-secondary-pale text-secondary text-xs font-semibold px-2.5 py-1 rounded-full">Çöp Poşeti</span>
+            </td>
+            <td class="py-4 px-6 text-on-surface-muted text-sm hidden md:table-cell">Rulo / Koli</td>
+            <td class="py-4 px-6 text-right">
+              <button class="text-secondary hover:text-primary font-semibold text-sm transition-colors">Bilgi Al</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4" data-reveal data-delay="160">
+      <p class="text-on-surface-muted text-sm">Tüm ürünler ve detaylı teknik özellikler için katalog talebinde bulunabilirsiniz.</p>
+      <div class="flex gap-3">
+        <button class="md:hidden inline-flex items-center gap-2 bg-primary text-white font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-primary-light transition-colors">
+          <span class="ms" style="font-size:16px;">download</span>
+          Katalog İndir
+        </button>
+        <a href="#iletisim" class="inline-flex items-center gap-2 bg-secondary-pale border border-secondary/30 text-secondary font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-secondary-pale/80 transition-colors">
+          Tam Katalog Talebi
+          <span class="ms" style="font-size:16px;">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================================================================
+     COMPONENT: QuoteCTASection
+     Styles: css/style.css (.teal-glow, .quote-form, .btn-submit)
+     ================================================================ -->
+<section class="relative overflow-hidden bg-primary py-20 md:py-28" id="iletisim">
+  <div class="absolute inset-0 teal-glow pointer-events-none"></div>
+  <div class="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-secondary/10 blur-[100px] pointer-events-none"></div>
+
+  <div class="relative max-w-container mx-auto px-4 md:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+
+      <!-- Left: Contact info -->
+      <div data-reveal data-delay="0">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-white/80 px-3 py-1 rounded-full mb-6">
+          <span style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">İletişim</span>
+        </div>
+        <h2 class="font-bold text-white mb-5" style="font-size:clamp(28px, 3.5vw, 44px); letter-spacing:-0.025em; line-height:1.15;">
+          Kurumsal Teklif Alın
+        </h2>
+        <p class="text-white/60 text-body-lg leading-relaxed mb-10 max-w-lg">
+          İşletmenizin ihtiyaçları için uzman satış ekibimizle iletişime geçin. Size özel ürün listesi ve rekabetçi fiyat teklifini en kısa sürede hazırlayalım.
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center shrink-0">
+              <span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">location_on</span>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm mb-1">Adres</div>
+              <div class="text-white/50 text-sm leading-relaxed">Macun Mahallesi 177. Cadde Timko 2 No: 19/G-4<br />Yenimahalle / Ankara</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center shrink-0">
+              <span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">phone</span>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm mb-1">Telefon</div>
+              <div class="text-white/50 text-sm">
+                <a href="tel:03123870775" class="hover:text-secondary transition-colors">0312 387 07 75</a><br />
+                <a href="tel:05422244279" class="hover:text-secondary transition-colors">0542 224 42 79</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center shrink-0">
+              <span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">mail</span>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm mb-1">E-posta</div>
+              <a href="mailto:info@antemtemizliktedarik.com" class="text-white/50 text-sm hover:text-secondary transition-colors">info@antemtemizliktedarik.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Quote form -->
+      <div data-reveal data-delay="100">
+        <div class="bg-surface-white rounded-card-lg p-8 shadow-ambient-lg">
+          <h3 class="font-bold text-primary mb-6 text-headline-sm">Kurumsal Teklif Formu</h3>
+          <form class="quote-form space-y-5" onsubmit="return false;">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-on-surface-muted font-bold mb-1.5" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;" for="firma">Firma Adı</label>
+                <input id="firma" type="text" placeholder="Şirket adınız" class="w-full h-12 bg-surface border border-outline/60 rounded-xl px-4 text-on-surface text-sm placeholder:text-on-surface-muted/50" />
+              </div>
+              <div>
+                <label class="block text-on-surface-muted font-bold mb-1.5" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;" for="yetkili">Yetkili Kişi</label>
+                <input id="yetkili" type="text" placeholder="Ad Soyad" class="w-full h-12 bg-surface border border-outline/60 rounded-xl px-4 text-on-surface text-sm placeholder:text-on-surface-muted/50" />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-on-surface-muted font-bold mb-1.5" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;" for="eposta">Kurumsal E-posta</label>
+                <input id="eposta" type="email" placeholder="ornek@sirket.com" class="w-full h-12 bg-surface border border-outline/60 rounded-xl px-4 text-on-surface text-sm placeholder:text-on-surface-muted/50" />
+              </div>
+              <div>
+                <label class="block text-on-surface-muted font-bold mb-1.5" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;" for="telefon">Telefon</label>
+                <input id="telefon" type="tel" placeholder="0555 000 00 00" class="w-full h-12 bg-surface border border-outline/60 rounded-xl px-4 text-on-surface text-sm placeholder:text-on-surface-muted/50" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-on-surface-muted font-bold mb-1.5" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;" for="urun-grubu">İlgilenilen Ürün Grubu</label>
+              <select id="urun-grubu" class="w-full h-12 bg-surface border border-outline/60 rounded-xl px-4 text-on-surface text-sm">
+                <option value="">Tüm İhtiyaçlarım (Genel Teklif)</option>
+                <option value="dezenfektan">Dezenfektan Ürünleri</option>
+                <option value="kagit">Endüstriyel Kağıt Ürünleri</option>
+                <option value="kimyasal">Temizlik Kimyasalları & Detarjanlar</option>
+                <option value="sarf">Endüstriyel Sarf Malzemeler</option>
+                <option value="cop">Endüstriyel Çöp Poşetleri</option>
+                <option value="ekipman">Temizlik Ekipmanları</option>
+                <option value="gida">Gıda Ürünleri</option>
+                <option value="kirtasiye">Kırtasiye & Baskılı Ürünler</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-on-surface-muted font-bold mb-1.5" style="font-size:11px; letter-spacing:0.07em; text-transform:uppercase;" for="detay">Detaylar & Özel İstekler</label>
+              <textarea id="detay" rows="3" placeholder="Aylık tahmini kullanım hacminizi veya özel ihtiyaçlarınızı belirtebilirsiniz..." class="w-full bg-surface border border-outline/60 rounded-xl px-4 py-3 text-on-surface text-sm resize-none placeholder:text-on-surface-muted/50"></textarea>
+            </div>
+            <button type="submit" class="btn-submit w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-primary-light shadow-ambient flex items-center justify-center gap-2">
+              <span class="ms" style="font-size:20px; font-variation-settings:'FILL' 0,'wght' 300;">send</span>
+              Kurumsal Teklif İste
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================================================================
+     COMPONENT: Footer
+     ================================================================ -->
+<footer class="bg-primary-light border-t border-white/8">
+  <div class="max-w-container mx-auto px-4 md:px-10 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+
+      <!-- Brand -->
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-9 h-9 rounded-xl bg-secondary flex items-center justify-center">
+            <span class="ms text-white" style="font-size:20px; font-variation-settings:'FILL' 1,'wght' 500;">water_drop</span>
+          </div>
+          <div>
+            <div class="font-bold text-white tracking-tight" style="font-size:16px;">ANTEM</div>
+            <div class="text-white/40" style="font-size:10px; letter-spacing:0.06em; text-transform:uppercase;">Kurumsal Temizlik</div>
+          </div>
+        </div>
+        <p class="text-white/40 text-sm leading-relaxed">
+          2000 yılından bu yana kurumsal temizlik ve hijyen ürünleri toptan tedarikinde güvenilir çözüm ortağınız.
+        </p>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <div class="text-white/60 font-bold mb-4" style="font-size:11px; letter-spacing:0.08em; text-transform:uppercase;">Hızlı Erişim</div>
+        <ul class="space-y-2.5">
+          <li><a href="index.html" class="text-white/50 text-sm hover:text-secondary transition-colors">Ana Sayfa</a></li>
+          <li><a href="#urun-gruplari" class="text-white/50 text-sm hover:text-secondary transition-colors">Ürün Grupları</a></li>
+          <li><a href="katalog.html" class="text-white/50 text-sm hover:text-secondary transition-colors">Katalog</a></li>
+          <li><a href="#sektorler" class="text-white/50 text-sm hover:text-secondary transition-colors">Sektörler</a></li>
+          <li><a href="#hakkimizda" class="text-white/50 text-sm hover:text-secondary transition-colors">Hakkımızda</a></li>
+        </ul>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <div class="text-white/60 font-bold mb-4" style="font-size:11px; letter-spacing:0.08em; text-transform:uppercase;">Ürün Grupları</div>
+        <ul class="space-y-2.5">
+          <li><a href="dezenfektan.html" class="text-white/50 text-sm hover:text-secondary transition-colors">Dezenfektan Ürünleri</a></li>
+          <li><a href="kagit-urunleri.html" class="text-white/50 text-sm hover:text-secondary transition-colors">Endüstriyel Kağıt Ürünleri</a></li>
+          <li><a href="kimyasallar.html" class="text-white/50 text-sm hover:text-secondary transition-colors">Temizlik Detarjanları</a></li>
+          <li><a href="sarf-malzeme.html" class="text-white/50 text-sm hover:text-secondary transition-colors">Endüstriyel Sarf Malzemeler</a></li>
+          <li><a href="cop-poseti.html" class="text-white/50 text-sm hover:text-secondary transition-colors">Endüstriyel Çöp Poşetleri</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <div class="text-white/60 font-bold mb-4" style="font-size:11px; letter-spacing:0.08em; text-transform:uppercase;">İletişim</div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2">
+            <span class="ms text-secondary shrink-0 mt-0.5" style="font-size:16px;">location_on</span>
+            <span class="text-white/50 text-sm leading-relaxed">Macun Mah. 177. Cadde Timko 2 No: 19/G-4 Yenimahalle/Ankara</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="ms text-secondary shrink-0" style="font-size:16px;">phone</span>
+            <a href="tel:03123870775" class="text-white/50 text-sm hover:text-secondary transition-colors">0312 387 07 75</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="ms text-secondary shrink-0" style="font-size:16px;">mail</span>
+            <a href="mailto:info@antemtemizliktedarik.com" class="text-white/50 text-sm hover:text-secondary transition-colors">info@antemtemizliktedarik.com</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-white/30 text-sm">© 2026 ANTEM Kurumsal Temizlik Tedarik. Tüm hakları saklıdır.</p>
+      <div class="flex gap-6">
+        <a href="#" class="text-white/30 text-sm hover:text-white/60 transition-colors">Gizlilik Politikası</a>
+        <a href="#" class="text-white/30 text-sm hover:text-white/60 transition-colors">Kullanım Şartları</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
