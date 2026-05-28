@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Catalog – ANTEM Corporate Cleaning Supply</title>
+  <meta name="description" content="ANTEM product catalog — disinfectants, consumables, paper products, trash bags, stationery and printed items. Corporate B2B wholesale supply." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f1621',
+            'primary-light': '#1e2a3a',
+            secondary: '#016a61',
+            'secondary-light': '#018a7e',
+            'secondary-pale': '#e6f5f3',
+            surface: '#f7f9fb',
+            'surface-low': '#f2f4f6',
+            'surface-container': '#eceef0',
+            'surface-high': '#e6e8ea',
+            'surface-white': '#ffffff',
+            'on-surface': '#191c1e',
+            'on-surface-muted': '#45464d',
+            'outline': '#c6c6cd',
+          },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+          borderRadius: { 'card': '20px', 'card-lg': '28px' },
+          boxShadow: {
+            'ambient':    '0 4px 24px rgba(15, 22, 33, 0.06)',
+            'ambient-md': '0 8px 40px rgba(15, 22, 33, 0.10)',
+          },
+          maxWidth: { 'container': '1280px' },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="antialiased">
+
+<!-- Navbar -->
+<header id="header" class="sticky top-0 z-50 bg-surface-white/95 backdrop-blur-sm border-b border-outline/60 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]">
+  <div class="max-w-container mx-auto px-4 md:px-10 h-[88px] flex items-center justify-between gap-4">
+
+    <a href="index.html" class="flex items-center shrink-0">
+      <img src="../assets/images/antem-logov2.png" alt="Antem Logo" class="nav-logo" />
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-1">
+      <a href="index.html" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Home</a>
+      <a href="katalog.html" class="nav-link px-4 py-2 rounded-lg text-secondary font-semibold text-sm bg-secondary-pale">Catalog</a>
+      <a href="index.html#sektorler" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Industries</a>
+      <a href="index.html#hakkimizda" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">About Us</a>
+      <a href="index.html#iletisim" class="nav-link px-4 py-2 rounded-lg text-on-surface-muted font-medium text-sm hover:bg-surface">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <div class="lang-switch hidden lg:flex">
+        <a href="../katalog.html" class="lang-btn" aria-label="Türkçe">TR</a>
+        <a href="katalog.html" class="lang-btn lang-active" aria-label="English">EN</a>
+      </div>
+      <a href="index.html#iletisim" class="btn-primary hidden md:inline-flex items-center gap-2 bg-secondary text-white font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-secondary-light shadow-sm">
+        <span class="ms" style="font-size:18px; font-variation-settings:'FILL' 0,'wght' 300;">request_quote</span>
+        Request a Quote
+      </a>
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-surface text-primary" aria-label="Open menu" aria-expanded="false">
+        <span class="ms" style="font-size:24px;">menu</span>
+      </button>
+    </div>
+
+  </div>
+  <div id="mobile-menu" class="lg:hidden border-t border-outline/50 bg-surface-white px-4 py-4">
+    <div class="flex flex-col gap-1">
+      <a href="index.html" class="px-4 py-3 rounded-xl text-on-surface font-medium text-sm hover:bg-surface nav-link" onclick="closeMobileMenu()">Home</a>
+      <a href="katalog.html" class="px-4 py-3 rounded-xl text-secondary font-semibold text-sm bg-secondary-pale" onclick="closeMobileMenu()">Catalog</a>
+      <a href="index.html#sektorler" class="px-4 py-3 rounded-xl text-on-surface font-medium text-sm hover:bg-surface nav-link" onclick="closeMobileMenu()">Industries</a>
+      <a href="index.html#hakkimizda" class="px-4 py-3 rounded-xl text-on-surface font-medium text-sm hover:bg-surface nav-link" onclick="closeMobileMenu()">About Us</a>
+      <a href="index.html#iletisim" class="btn-primary mt-2 flex items-center justify-center gap-2 bg-secondary text-white font-semibold text-sm px-5 py-3 rounded-xl hover:bg-secondary-light" onclick="closeMobileMenu()">
+        <span class="ms" style="font-size:18px;">request_quote</span>
+        Request a Quote
+      </a>
+      <div class="flex items-center gap-3 mt-2 pt-3 border-t border-outline/30">
+        <span class="text-on-surface-muted text-xs font-semibold">Language:</span>
+        <div class="lang-switch flex">
+          <a href="../katalog.html" class="lang-btn">TR</a>
+          <a href="katalog.html" class="lang-btn lang-active">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Catalog Hero -->
+<div class="cat-hero">
+  <div class="relative max-w-container mx-auto px-4 md:px-10 py-12 md:py-16">
+    <nav class="breadcrumb-nav">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <span style="color:rgba(255,255,255,0.7);">Product Catalog</span>
+    </nav>
+    <div class="cat-hero-icon">
+      <span class="ms text-secondary" style="font-size:32px; font-variation-settings:'FILL' 0,'wght' 300;">category</span>
+    </div>
+    <h1 class="font-extrabold text-white mb-3" style="font-size:clamp(26px,4vw,44px); letter-spacing:-0.025em; line-height:1.1;">Product Catalog</h1>
+    <p class="text-white/55 max-w-xl leading-relaxed" style="font-size:16px;">Industrial cleaning, disinfectant and consumable products across 6 categories. Request a B2B wholesale quote.</p>
+    <div class="flex flex-col sm:flex-row gap-3 mt-8">
+      <a href="index.html#iletisim" class="hero-btn-primary">
+        <span class="ms hero-btn-icon">request_quote</span>
+        Request a Quote
+      </a>
+      <a href="#urun-listesi" class="hero-btn-outline">
+        <span class="ms hero-btn-icon">grid_view</span>
+        Browse Products
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="urun-listesi" style="scroll-margin-top:88px;"></div>
+
+<!-- Sticky Filter Bar -->
+<div class="catalog-filter-bar">
+  <div class="max-w-container mx-auto px-4 md:px-10 py-3">
+    <div class="flex items-center gap-3 flex-wrap md:flex-nowrap">
+
+      <div class="relative shrink-0 w-full md:w-auto">
+        <span class="ms absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-muted pointer-events-none" style="font-size:20px;">search</span>
+        <input
+          id="catalog-search"
+          type="search"
+          class="catalog-search"
+          placeholder="Search products…"
+          autocomplete="off"
+          aria-label="Search products"
+        />
+      </div>
+
+      <div class="flex items-center gap-1.5 overflow-x-auto flex-1 min-w-0 pb-0.5" style="-webkit-overflow-scrolling:touch; scrollbar-width:none;">
+        <button class="catalog-tab active whitespace-nowrap" data-tab="all">All</button>
+        <button class="catalog-tab whitespace-nowrap" data-tab="dezenfektan">Disinfectant</button>
+        <button class="catalog-tab whitespace-nowrap" data-tab="sarf">Consumables</button>
+        <button class="catalog-tab whitespace-nowrap" data-tab="kagit">Paper Products</button>
+        <button class="catalog-tab whitespace-nowrap" data-tab="cop">Trash Bags</button>
+        <button class="catalog-tab whitespace-nowrap" data-tab="kirtasiye">Stationery</button>
+        <button class="catalog-tab whitespace-nowrap" data-tab="baskili">Print Products</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Catalog Grid -->
+<main class="bg-surface py-12 md:py-16">
+  <div class="max-w-container mx-auto px-4 md:px-10">
+
+    <div id="catalog-no-results" class="catalog-no-results">
+      <span class="ms block mb-3 mx-auto" style="font-size:48px; color:#c6c6cd;">search_off</span>
+      <p class="font-bold text-on-surface text-lg mb-1">No results found</p>
+      <p class="text-on-surface-muted text-sm">Try a different search term or clear the filter.</p>
+    </div>
+
+    <!-- Disinfectant Products -->
+    <section class="catalog-section mb-14" data-cat-section="dezenfektan">
+      <div class="flex items-center gap-3 mb-6" data-reveal data-delay="0">
+        <div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center shrink-0">
+          <span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">sanitizer</span>
+        </div>
+        <div>
+          <h2 class="font-bold text-on-surface" style="font-size:18px; letter-spacing:-0.01em;">Disinfectant Products</h2>
+          <p class="text-on-surface-muted text-sm">Disinfectants for hand, surface, food and veterinary hygiene — 4 products</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+
+        <div class="catalog-card" data-name="el cilt dezenfektanı hand skin disinfectant" data-category="dezenfektan">
+          <div class="catalog-card-img">
+            <img src="../Dezenfektan-Ürünleri/El-Cilt-Dezenfektanı.png" alt="Hand & Skin Disinfectant" loading="lazy" />
+          </div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Disinfectant</span>
+            <p class="catalog-card-name">Hand &amp; Skin Disinfectant</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="gıda alanları hava sahası food area airspace" data-category="dezenfektan">
+          <div class="catalog-card-img">
+            <img src="../Dezenfektan-Ürünleri/Gıda-Alanları-Hava-Sahası.png" alt="Food Area Airspace Disinfectant" loading="lazy" />
+          </div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Disinfectant</span>
+            <p class="catalog-card-name">Food Area Airspace Disinfectant</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="veteriner hijyen alanları veterinary hygiene" data-category="dezenfektan">
+          <div class="catalog-card-img">
+            <img src="../Dezenfektan-Ürünleri/Veteriner-Hijyen-Alanları.png" alt="Veterinary Hygiene Disinfectant" loading="lazy" />
+          </div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Disinfectant</span>
+            <p class="catalog-card-name">Veterinary Hygiene Disinfectant</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="yer yüzey dezenfektanı floor surface disinfectant" data-category="dezenfektan">
+          <div class="catalog-card-img">
+            <img src="../Dezenfektan-Ürünleri/Yer-Yüzey-Dezenfektanı.png" alt="Floor & Surface Disinfectant" loading="lazy" />
+          </div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Disinfectant</span>
+            <p class="catalog-card-name">Floor &amp; Surface Disinfectant</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Industrial Consumables -->
+    <section class="catalog-section mb-14" data-cat-section="sarf">
+      <div class="flex items-center gap-3 mb-6" data-reveal data-delay="0">
+        <div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center shrink-0">
+          <span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">cleaning_services</span>
+        </div>
+        <div>
+          <h2 class="font-bold text-on-surface" style="font-size:18px; letter-spacing:-0.01em;">Industrial Consumables</h2>
+          <p class="text-on-surface-muted text-sm">Professional cleaning tools and supplies — 20 products</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+
+        <div class="catalog-card" data-name="bulaşık eldiveni dishwashing glove" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Bulaşık-Eldiveni.png" alt="Dishwashing Glove" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Dishwashing Glove</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="bulaşık fırçası dish brush" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Bulaşık-Fırçası.png" alt="Dish Brush" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Dish Brush</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="bulaşık süngeri dish sponge" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Bulaşık-Süngeri.png" alt="Dish Sponge" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Dish Sponge</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="bulaşık teli steel wool" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Bulaşık-Teli.png" alt="Steel Wool Scrubber" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Steel Wool Scrubber</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="cila teli polishing wire" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Cila-Teli.png" alt="Polishing Wire" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Polishing Wire</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="kabinli faraş fırça takımı dustpan brush set" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Kabinli-Faraş-Fırça-Takımı.png" alt="Dustpan & Brush Set" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Dustpan &amp; Brush Set</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="kareli bez checkered cloth" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Kareli-Bez.png" alt="Checkered Cloth" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Checkered Cloth</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="klozet fırçası toilet brush" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Klozet-Fırçası.png" alt="Toilet Brush" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Toilet Brush</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="maşrapa ladle scoop" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Maşrapa.png" alt="Ladle / Scoop" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Ladle / Scoop</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="mikrofiber bez microfiber cloth" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Mikrofiber-Bez.png" alt="Microfiber Cloth" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Microfiber Cloth</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="oto fırçası auto brush" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Oto-Fırçası.png" alt="Auto / Vehicle Brush" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Auto / Vehicle Brush</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="temizlik arabası tek kovalı single bucket cleaning trolley" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Temizlik-Arabası-Tek-Kovalı%20(1).png" alt="Single-Bucket Cleaning Trolley" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Single-Bucket Cleaning Trolley</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="temizlik arabası çift kovalı double bucket trolley" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Temizlik-Arabası-Çift-Kovalı.png" alt="Double-Bucket Cleaning Trolley" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Double-Bucket Cleaning Trolley</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="temizlik seti cleaning set" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Temizlik-Seti.png" alt="Cleaning Set" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Cleaning Set</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="tuvalet fırçası toilet brush" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Tuvalet-Fırçası.png" alt="Toilet Brush Set" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Toilet Brush Set</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="vileda paspas vileda mop" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Vileda%20Paspas.png" alt="Vileda Mop" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Vileda Mop</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="vileda kovası vileda bucket" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Vileda-Kovası.png" alt="Vileda Bucket" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Vileda Bucket</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="çöp kovası waste bin" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/Çöp-Kovası.png" alt="Waste Bin" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Waste Bin</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="çöp litter refuse" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/çöp.png" alt="Refuse Container" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Refuse Container</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="işçi eldiveni worker glove" data-category="sarf">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Sarf-Malzemeleri/İşçi-Eldiveni.png" alt="Worker Glove" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Consumable</span>
+            <p class="catalog-card-name">Worker Glove</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Industrial Paper Products -->
+    <section class="catalog-section mb-14" data-cat-section="kagit">
+      <div class="flex items-center gap-3 mb-6" data-reveal data-delay="0">
+        <div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center shrink-0">
+          <span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">receipt_long</span>
+        </div>
+        <div>
+          <h2 class="font-bold text-on-surface" style="font-size:18px; letter-spacing:-0.01em;">Industrial Paper Products</h2>
+          <p class="text-on-surface-muted text-sm">Dispenser towels, roll towels, toilet paper and examination covers — 8 products</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+
+        <div class="catalog-card" data-name="dispanser peçete dispenser napkin" data-category="kagit">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Temizlik-Kağıtları/Dispanser-Peçete.png" alt="Dispenser Napkin" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Paper Product</span>
+            <p class="catalog-card-name">Dispenser Napkin</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="eko peçete eco napkin" data-category="kagit">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Temizlik-Kağıtları/Eko-peçete.png" alt="Eco Napkin" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Paper Product</span>
+            <p class="catalog-card-name">Eco Napkin</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="ev tipi rulo havlu household roll towel" data-category="kagit">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Temizlik-Kağıtları/Ev-Tipi-Rulo-Havlu.png" alt="Household Roll Towel" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Paper Product</span>
+            <p class="catalog-card-name">Household Roll Towel</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="hareketli havlu roll towel" data-category="kagit">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Temizlik-Kağıtları/Hareketli-Havlu.png" alt="Continuous Roll Towel" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Paper Product</span>
+            <p class="catalog-card-name">Continuous Roll Towel</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="kağıt temizlik toplu bulk paper cleaning" data-category="kagit">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Temizlik-Kağıtları/Kağıt-Temizlik-Toplu.png" alt="Bulk Paper Cleaning" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Paper Product</span>
+            <p class="catalog-card-name">Bulk Paper Cleaning</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="mini jumbo tuvalet kağıdı mini jumbo toilet paper" data-category="kagit">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Temizlik-Kağıtları/Mini-Jumbo-Tuvalet-Kağıdı.png" alt="Mini Jumbo Toilet Paper" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Paper Product</span>
+            <p class="catalog-card-name">Mini Jumbo Toilet Paper</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="muayene masa örtüsü examination table cover" data-category="kagit">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Temizlik-Kağıtları/Muayene-Masa-Örtüsü.png" alt="Examination Table Cover" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Paper Product</span>
+            <p class="catalog-card-name">Examination Table Cover</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="içten çekmeli tuvalet kağıdı coreless toilet paper" data-category="kagit">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Temizlik-Kağıtları/İçten-Çekmeli-Tuvalet-Kağıdı.png" alt="Coreless (Centre-Pull) Toilet Paper" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Paper Product</span>
+            <p class="catalog-card-name">Centre-Pull Toilet Paper</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Industrial Trash Bags -->
+    <section class="catalog-section mb-14" data-cat-section="cop">
+      <div class="flex items-center gap-3 mb-6" data-reveal data-delay="0">
+        <div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center shrink-0">
+          <span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">recycling</span>
+        </div>
+        <div>
+          <h2 class="font-bold text-on-surface" style="font-size:18px; letter-spacing:-0.01em;">Industrial Trash Bags</h2>
+          <p class="text-on-surface-muted text-sm">From mini to extra-large, including medical waste bags — 7 products</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+
+        <div class="catalog-card" data-name="battal boy çöp poşeti extra large trash bag" data-category="cop">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Çöp-Poşetleri/Battal-Boy-Çöp-Poşeti.png" alt="Extra-Large Trash Bag" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Trash Bag</span>
+            <p class="catalog-card-name">Extra-Large Trash Bag</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="büyük boy çöp poşeti large trash bag" data-category="cop">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Çöp-Poşetleri/Büyük-Boy-Çöp-Poşeti.png" alt="Large Trash Bag" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Trash Bag</span>
+            <p class="catalog-card-name">Large Trash Bag</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="dökme boy çöp poşeti bulk trash bag" data-category="cop">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Çöp-Poşetleri/Dökme-Boy-Çöp-Poşeti.png" alt="Bulk Trash Bag" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Trash Bag</span>
+            <p class="catalog-card-name">Bulk Trash Bag</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="mini boy çöp poşeti mini trash bag" data-category="cop">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Çöp-Poşetleri/Mini-Boy-Çöp-Poşeti.png" alt="Mini Trash Bag" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Trash Bag</span>
+            <p class="catalog-card-name">Mini Trash Bag</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="orta boy çöp poşeti medium trash bag" data-category="cop">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Çöp-Poşetleri/Orta-Boy-Çöp-Poşeti.png" alt="Medium Trash Bag" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Trash Bag</span>
+            <p class="catalog-card-name">Medium Trash Bag</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="rulo çöp poşeti roll trash bag" data-category="cop">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Çöp-Poşetleri/Rulo-Çöp-Poşeti.png" alt="Roll Trash Bag" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Trash Bag</span>
+            <p class="catalog-card-name">Roll Trash Bag</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="tıbbi atık çöp poşeti medical waste bag" data-category="cop">
+          <div class="catalog-card-img"><img src="../Endistüriyel-Çöp-Poşetleri/Tıbbi-Atık-Çöp-Poşeti.png" alt="Medical Waste Bag" loading="lazy" /></div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Trash Bag</span>
+            <p class="catalog-card-name">Medical Waste Bag</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Stationery -->
+    <section class="catalog-section mb-14" data-cat-section="kirtasiye">
+      <div class="flex items-center gap-3 mb-6" data-reveal data-delay="0">
+        <div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center shrink-0">
+          <span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">description</span>
+        </div>
+        <div>
+          <h2 class="font-bold text-on-surface" style="font-size:18px; letter-spacing:-0.01em;">Stationery Products</h2>
+          <p class="text-on-surface-muted text-sm">Office and corporate stationery — 13 products</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+
+        <div class="catalog-card" data-name="asetat kalemi overhead marker" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/Asetat-Kalemi.png" alt="Overhead Marker" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Overhead Marker</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+        <div class="catalog-card" data-name="bant kesme makinesi tape dispenser" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/Bant-Kesme-Makinesi.png" alt="Tape Dispenser" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Tape Dispenser</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+        <div class="catalog-card" data-name="dar klasör narrow binder" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/Dar-Klasör.png" alt="Narrow Binder" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Narrow Binder</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+        <div class="catalog-card" data-name="delgeç hole punch" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/Delgeç.png" alt="Hole Punch" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Hole Punch</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+        <div class="catalog-card" data-name="fosforlu kalem çeşitleri highlighter set" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/Fosforlu-Kalem-Çeşitleri.png" alt="Highlighter Set" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Highlighter Set</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+        <div class="catalog-card" data-name="geniş klasör wide binder" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/Geniş-Klasör.png" alt="Wide Binder" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Wide Binder</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+        <div class="catalog-card" data-name="hesap makinesi calculator" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/Hesap-Makinesi.png" alt="Calculator" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Calculator</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+        <div class="catalog-card" data-name="masa seti desk set" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/Masa-Seti.png" alt="Desk Set" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Desk Set</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+        <div class="catalog-card" data-name="poşet dosya pocket folder" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/Poşet-Dosya.png" alt="Pocket Folder" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Pocket Folder</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+        <div class="catalog-card" data-name="sekreterlik seti secretary set" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/Sekreterlik-Seti.png" alt="Secretary Set" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Secretary Set</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+        <div class="catalog-card" data-name="tahta kalemi whiteboard marker" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/Tahta-Kalemi.png" alt="Whiteboard Marker" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Whiteboard Marker</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+        <div class="catalog-card" data-name="telli dosya wire binder file" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/Telli-Dosya.png" alt="Wire Binder File" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Wire Binder File</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+        <div class="catalog-card" data-name="zımba stapler" data-category="kirtasiye">
+          <div class="catalog-card-img"><img src="../Kırtasiye-Ürünleri/zımba.png" alt="Stapler" loading="lazy" /></div>
+          <div class="catalog-card-body"><span class="catalog-card-cat">Stationery</span><p class="catalog-card-name">Stapler</p><a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Print Products -->
+    <section class="catalog-section mb-14" data-cat-section="baskili">
+      <div class="flex items-center gap-3 mb-6" data-reveal data-delay="0">
+        <div class="w-10 h-10 rounded-xl bg-secondary-pale flex items-center justify-center shrink-0">
+          <span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">print</span>
+        </div>
+        <div>
+          <h2 class="font-bold text-on-surface" style="font-size:18px; letter-spacing:-0.01em;">Print Products</h2>
+          <p class="text-on-surface-muted text-sm">Custom branded and printed corporate materials</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+
+        <div class="catalog-card" data-name="baskılı poşet branded bag" data-category="baskili">
+          <div class="catalog-card-img">
+            <div class="flex items-center justify-center h-full">
+              <span class="ms text-secondary" style="font-size:48px; font-variation-settings:'FILL' 0,'wght' 200;">print</span>
+            </div>
+          </div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Print</span>
+            <p class="catalog-card-name">Custom Branded Bags</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="catalog-card" data-name="katalog broşür catalog brochure" data-category="baskili">
+          <div class="catalog-card-img">
+            <div class="flex items-center justify-center h-full">
+              <span class="ms text-secondary" style="font-size:48px; font-variation-settings:'FILL' 0,'wght' 200;">menu_book</span>
+            </div>
+          </div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-cat">Print</span>
+            <p class="catalog-card-name">Catalog &amp; Brochure Printing</p>
+            <a href="index.html#iletisim" class="catalog-card-btn">Request Quote <span class="ms" style="font-size:15px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- Corporate Info Block -->
+<section class="bg-surface-container py-14 md:py-20">
+  <div class="max-w-container mx-auto px-4 md:px-10">
+    <div class="catalog-info-block p-8 md:p-12">
+      <div class="text-center mb-10" data-reveal data-delay="0">
+        <div class="inline-flex items-center gap-2 bg-secondary-pale text-secondary px-3 py-1 rounded-full mb-4" style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">
+          Corporate Supply
+        </div>
+        <h2 class="font-extrabold text-on-surface mb-3" style="font-size:clamp(20px,3vw,32px); letter-spacing:-0.02em;">Why Work with ANTEM?</h2>
+        <p class="text-on-surface-muted max-w-xl mx-auto leading-relaxed" style="font-size:15px;">We simplify your corporate supply processes with bulk order advantages, regular delivery and dedicated catalog support.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div class="flex gap-4 items-start" data-reveal data-delay="80">
+          <div class="w-11 h-11 rounded-xl bg-secondary-pale flex items-center justify-center shrink-0 mt-0.5">
+            <span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">inventory_2</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-on-surface mb-1" style="font-size:15px;">Bulk Order Advantage</h3>
+            <p class="text-on-surface-muted leading-relaxed" style="font-size:13.5px;">Custom pricing and package offers based on your monthly usage volume. Flexible agreements on minimum order quantities.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start" data-reveal data-delay="160">
+          <div class="w-11 h-11 rounded-xl bg-secondary-pale flex items-center justify-center shrink-0 mt-0.5">
+            <span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">local_shipping</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-on-surface mb-1" style="font-size:15px;">Regular Delivery</h3>
+            <p class="text-on-surface-muted leading-relaxed" style="font-size:13.5px;">Planned and reliable logistics support primarily in Ankara and nationwide. Uninterrupted supply chain.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start" data-reveal data-delay="240">
+          <div class="w-11 h-11 rounded-xl bg-secondary-pale flex items-center justify-center shrink-0 mt-0.5">
+            <span class="ms text-secondary" style="font-size:22px; font-variation-settings:'FILL' 0,'wght' 300;">folder_special</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-on-surface mb-1" style="font-size:15px;">Dedicated Catalog Support</h3>
+            <p class="text-on-surface-muted leading-relaxed" style="font-size:13.5px;">We prepare a custom price list and product detail file tailored to your organisation's needs. Fast quote turnaround.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quote CTA -->
+<section class="page-cta py-16 md:py-20">
+  <div class="max-w-container mx-auto px-4 md:px-10 text-center">
+    <div class="inline-flex items-center gap-2 bg-white/8 border border-white/12 text-white/70 px-3 py-1 rounded-full mb-6" style="font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;">Corporate Quote</div>
+    <h2 class="font-extrabold text-white mb-4" style="font-size:clamp(24px,3vw,38px); letter-spacing:-0.025em; line-height:1.15;">Customise Your Catalog,<br>Request a Quote</h2>
+    <p class="text-white/50 max-w-lg mx-auto mb-8 leading-relaxed" style="font-size:16px;">Specify the products on your requirement list and we will prepare a custom price offer for your organisation. Response time is within 24 hours.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="index.html#iletisim" class="hero-btn-primary">
+        <span class="ms hero-btn-icon">request_quote</span>
+        Request Corporate Quote
+      </a>
+      <a href="tel:03123870775" class="hero-btn-outline">
+        <span class="ms hero-btn-icon">phone</span>
+        +90 312 387 07 75
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary-light border-t border-white/8">
+  <div class="max-w-container mx-auto px-4 md:px-10 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <img src="../assets/images/antem-logov2.png" alt="Antem Logo" class="footer-logo" />
+        <div class="text-white/40 text-xs leading-relaxed">Macun Mah. 177. Cadde Timko 2 No: 19/G-4<br>Yenimahalle / Ankara</div>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="tel:03123870775" class="text-white/50 text-sm hover:text-secondary transition-colors">+90 312 387 07 75</a>
+        <a href="mailto:info@antemtemizliktedarik.com" class="text-white/50 text-sm hover:text-secondary transition-colors">info@antemtemizliktedarik.com</a>
+      </div>
+    </div>
+    <div class="border-t border-white/8 mt-8 pt-6 text-center">
+      <p class="text-white/30 text-sm">© 2026 ANTEM Corporate Cleaning Supply. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
