@@ -127,10 +127,100 @@
 })();
 
 /* --------------------------------------------------------------------------
-   Catalog — Category tabs + search filter
-   Each .catalog-card carries data-name (lowercase) and data-category.
-   Each section carries data-cat-section matching the tab data-tab value.
-   Toggling .search-hidden hides cards; sections hide when all cards hidden.
+   Quote Manager — localStorage-based quote list
+   -------------------------------------------------------------------------- */
+var QuoteManager = (function () {
+  var KEY = 'antem_quote_list';
+
+  function getList() {
+    try {
+      return JSON.parse(localStorage.getItem(KEY)) || [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function saveList(list) {
+    localStorage.setItem(KEY, JSON.stringify(list));
+  }
+
+  function addProduct(product) {
+    var list = getList();
+    if (!list.find(function (p) { return p.id === product.id; })) {
+      list.push({
+        id:           product.id,
+        code:         product.code,
+        name:         product.name,
+        category:     product.category,
+        categoryLabel: product.categoryLabel,
+        image:        product.image,
+        brand:        product.brand || '',
+        unit:         product.unit || '',
+        spec:         product.spec || '',
+        qty:          '1',
+        note:         ''
+      });
+      saveList(list);
+    }
+    updateBadges();
+  }
+
+  function removeProduct(id) {
+    var list = getList().filter(function (p) { return p.id !== id; });
+    saveList(list);
+    updateBadges();
+  }
+
+  function updateProduct(id, field, value) {
+    var list = getList();
+    var item = list.find(function (p) { return p.id === id; });
+    if (item) {
+      item[field] = value;
+      saveList(list);
+    }
+  }
+
+  function isInList(id) {
+    return !!getList().find(function (p) { return p.id === id; });
+  }
+
+  function count() {
+    return getList().length;
+  }
+
+  function clearList() {
+    saveList([]);
+    updateBadges();
+  }
+
+  function updateBadges() {
+    var n   = count();
+    var els = document.querySelectorAll('[data-quote-count]');
+    els.forEach(function (el) {
+      el.textContent = n > 0 ? '(' + n + ')' : '';
+    });
+  }
+
+  return {
+    getList:       getList,
+    addProduct:    addProduct,
+    removeProduct: removeProduct,
+    updateProduct: updateProduct,
+    isInList:      isInList,
+    count:         count,
+    clearList:     clearList,
+    updateBadges:  updateBadges
+  };
+})();
+
+/* Init badges on every page load */
+(function () {
+  QuoteManager.updateBadges();
+})();
+
+/* --------------------------------------------------------------------------
+   Catalog — Category tabs + search filter (static catalog pages only)
+   Skipped when data-dynamic-catalog is present (katalog.html uses JSON).
    -------------------------------------------------------------------------- */
 (function () {
   var searchInput = document.getElementById('catalog-search');
@@ -138,6 +228,9 @@
   var cards       = document.querySelectorAll('.catalog-card[data-category]');
   var sections    = document.querySelectorAll('[data-cat-section]');
   var noResults   = document.getElementById('catalog-no-results');
+
+  /* Skip on dynamic catalog page (cards loaded async from JSON) */
+  if (document.getElementById('catalog-sections')) return;
 
   if (!searchInput && !tabs.length) return;
 
